@@ -1,0 +1,165 @@
+---
+---
+
+@font-face {
+  src: url("/assets/fonts/calibre-test-regular.woff") format("woff");
+  font-family: "Calibre";
+}
+
+@font-face {
+  src: url("/assets/fonts/calibre-test-regular-italic.woff") format("woff");
+  font-family: "Calibre";
+  font-style: italic;
+}
+
+@import "main";
+
+footer {
+  .container {
+    #copyright {
+      grid-area: cop;
+      text-align: center;
+      align-self: center;
+    }
+
+    grid-template-areas:
+      "cop";
+
+    @include screen-small {
+      grid-template-areas:
+        "cop cop cop";
+    }
+
+    @include screen-medium {
+      grid-template-areas:
+        "cop cop cop cop cop";
+    }
+
+    @include screen-large {
+      grid-template-areas:
+        "... cop cop cop cop cop ...";
+    }
+  }
+}
+
+#home {
+  &_header {
+    .container {
+      h1 {
+        grid-area: pti;
+        align-self: end;
+        text-align: center;
+      }
+
+      h3 {
+        grid-area: psu;
+        text-align: center;
+      }
+
+      grid-template-areas:
+        "pti"
+        "psu";
+
+      @include screen-small {
+        grid-template-areas:
+          "pti pti pti"
+          "psu psu psu";
+      }
+    }
+  }
+
+  &_typography {
+    .container {
+      h1 {
+        grid-area: tpa;
+      }
+
+      h2 {
+        grid-area: tse;
+      }
+
+      h3 {
+        grid-area: tsu;
+      }
+
+      h4 {
+        grid-area: hea;
+      }
+
+      h5 {
+        grid-area: foo;
+      }
+
+      h6 {
+        grid-area: ste;
+      }
+
+      p {
+        grid-area: par;
+        margin-bottom: 0;
+      }
+
+      p#blockquote_paragraph {
+        grid-area: bpa;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+        line-height: 1.15;
+      }
+
+      h5#blockquote_footing {
+        grid-area: bfo;
+        text-align: end;
+      }
+
+      grid-template-areas:
+        "tpa"
+        "tse"
+        "tsu"
+        "hea"
+        "foo"
+        "ste"
+        "par"
+        "bpa"
+        "bfo";
+
+      @include screen-small {
+        grid-template-areas:
+          "tpa tpa tpa"
+          "tse tse tse"
+          "tsu tsu tsu"
+          "hea hea hea"
+          "foo foo foo"
+          "ste ste ste"
+          "par par par"
+          "bpa bpa bpa"
+          "bfo bfo bfo";
+      }
+    }
+  }
+
+  &_table {
+    .container {
+      table {
+        grid-area: tat;
+      }
+
+      grid-template-areas:
+        "tat";
+
+      @include screen-small {
+        grid-template-areas:
+          "tat tat tat";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "tat tat tat tat tat";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "tat tat tat tat tat tat tat";
+      }
+    }
+  }
+}

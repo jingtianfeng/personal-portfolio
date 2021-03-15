@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        NSPACE | {{ page.title }}
+    </title>
+    <link rel="icon"
+          href="/assets/img/favicon.ico">
+    <link rel="stylesheet"
+          href="/assets/css/main.css">
+</head>
+<body>
+{{ content }}
+<footer>
+    <div class="container">
+        <h5 id="copyright">
+            Copyright © J.T. Feng <br>
+            All rights reserved
+        </h5>
+    </div>
+</footer>
+
+<div class="screen--light"></div>
+<div class="nav-main">
+    <p>
+        Words can be like X-rays, if you use them properly, they’ll go through anything.
+        You read and you’re pierced.
+    </p>
+</div>
+<div class="burger">
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+</div>
+<script>
+    const screenLight = document.querySelector('.screen--light')
+    const burger = document.querySelector('.burger')
+    const burgerLines = burger.querySelectorAll('.burger__line')
+    const navMain = document.querySelector('.nav-main')
+
+    burger.addEventListener('click', () => {
+        screenLight.classList.toggle('screen--light--active')
+        burger.classList.toggle('burger--active')
+        burgerLines.forEach((burgerLine) => {
+            burgerLine.classList.toggle('burger--active__line--active')
+        })
+        navMain.classList.toggle('nav-main--active')
+    })
+</script>
+</body>
+</html>
