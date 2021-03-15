@@ -1,3 +1,3 @@
-# nspace
+# personal-portfolio
 
 Welcome to my personal portfolio website folks! And here's my life demystified...
