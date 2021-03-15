@@ -46,24 +46,52 @@ footer {
   &_header {
     .container {
       h1 {
-        grid-area: pti;
+        grid-area: he1;
         align-self: end;
         text-align: center;
       }
 
       h3 {
-        grid-area: psu;
+        grid-area: he3;
         text-align: center;
       }
 
+      p {
+        grid-area: hep;
+      }
+
+      h5 {
+        grid-area: he5;
+      }
+
       grid-template-areas:
-        "pti"
-        "psu";
+        "he1"
+        "he3"
+        "hep"
+        "he5";
 
       @include screen-small {
         grid-template-areas:
-          "pti pti pti"
-          "psu psu psu";
+          "he1 he1 he1"
+          "he3 he3 he3"
+          "hep hep hep"
+          "he5 he5 he5";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "he1 he1 he1 he1 he1"
+          "he3 he3 he3 he3 he3"
+          "hep hep hep hep hep"
+          "he5 he5 he5 he5 he5";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "... he1 he1 he1 he1 he1 ..."
+          "... he3 he3 he3 he3 he3 ..."
+          "... hep hep hep hep hep ..."
+          "... he5 he5 he5 he5 he5 ...";
       }
     }
   }
