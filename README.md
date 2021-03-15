@@ -1,2 +1,3 @@
 # nspace
-Template for Jekyll projects featuring my CSS library NSPACE: Swiss design meets CSS Grid.
+
+Welcome to my personal portfolio website folks! And here's my life demystified...
