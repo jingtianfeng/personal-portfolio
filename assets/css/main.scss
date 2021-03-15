@@ -95,4 +95,106 @@ footer {
       }
     }
   }
+
+  &_about {
+    .container {
+      h2 {
+        grid-area: ab2;
+      }
+
+      h3 {
+        grid-area: ab3;
+      }
+
+      grid-template-areas:
+        "ab2"
+        "ab3";
+
+      @include screen-small {
+        grid-template-areas:
+          "ab2 ab2 ab2"
+          "ab3 ab3 ab3";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "ab2 ab2 ab2 ab2 ab2"
+          "ab3 ab3 ab3 ab3 ab3";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
+          "ab3 ab3 ab3 ab3 ab3 ab3 ab3";
+      }
+    }
+  }
+
+  &_showcase {
+    .container {
+      h2 {
+        grid-area: sh2;
+      }
+
+      h3 {
+        grid-area: sh3;
+      }
+
+      grid-template-areas:
+        "sh2"
+        "sh3";
+
+      @include screen-small {
+        grid-template-areas:
+          "sh2 sh2 sh2"
+          "sh3 sh3 sh3";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "sh2 sh2 sh2 sh2 sh2"
+          "sh3 sh3 sh3 sh3 sh3";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "sh2 sh2 sh2 sh2 sh2 sh2 sh2"
+          "sh3 sh3 sh3 sh3 sh3 sh3 sh3";
+      }
+    }
+  }
+
+  &_contact {
+    .container {
+      h2 {
+        grid-area: co2;
+      }
+
+      h3 {
+        grid-area: co3;
+      }
+
+      grid-template-areas:
+        "co2"
+        "co3";
+
+      @include screen-small {
+        grid-template-areas:
+          "co2 co2 co2"
+          "co3 co3 co3";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "co2 co2 co2 co2 co2"
+          "co3 co3 co3 co3 co3";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "co2 co2 co2 co2 co2 co2 co2"
+          "co3 co3 co3 co3 co3 co3 co3";
+      }
+    }
+  }
 }
