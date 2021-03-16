@@ -252,6 +252,14 @@ footer {
         grid-area: co3;
       }
 
+      #contact_email_link,
+      #contact_linkedin_link {
+        display: grid;
+        grid-template-columns: $icon2 1fr;
+        grid-column-gap: $nspace2;
+        align-items: center;
+      }
+
       #contact_email {
         &_paragraph {
           grid-area: emp;
@@ -269,10 +277,6 @@ footer {
 
         &_link {
           grid-area: lil;
-          display: grid;
-          grid-template-columns: $icon2 1fr;
-          grid-column-gap: $nspace2;
-          align-items: center;
         }
       }
 
