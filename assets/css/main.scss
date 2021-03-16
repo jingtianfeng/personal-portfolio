@@ -149,8 +149,8 @@ footer {
       }
 
       grid-template-areas:
-        "ab2"
         "ab3"
+        "ab2"
         "coi"
         "coh"
         "cop"
@@ -163,8 +163,8 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "ab2 ab2 ab2"
           "ab3 ab3 ab3"
+          "ab2 ab2 ab2"
           "coi coi coi"
           "coh coh coh"
           "cop cop cop"
@@ -178,8 +178,8 @@ footer {
 
       @include screen-medium {
         grid-template-areas:
-          "ab2 ab2 ab2 ab2 ab2"
           "ab3 ab3 ab3 ab3 ab3"
+          "ab2 ab2 ab2 ab2 ab2"
           "coi coi coi coi coi"
           "coh coh coh coh coh"
           "cop cop cop cop cop"
@@ -193,8 +193,8 @@ footer {
 
       @include screen-large {
         grid-template-areas:
-          "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
           "ab3 ab3 ab3 ab3 ab3 ab3 ab3"
+          "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
           "coi coi coi coi coi coi coi"
           "coh coh coh coh coh coh coh"
           "cop cop cop cop cop cop cop"
@@ -219,25 +219,25 @@ footer {
       }
 
       grid-template-areas:
-        "sh2"
-        "sh3";
+        "sh3"
+        "sh2";
 
       @include screen-small {
         grid-template-areas:
-          "sh2 sh2 sh2"
-          "sh3 sh3 sh3";
+          "sh3 sh3 sh3"
+          "sh2 sh2 sh2";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "sh2 sh2 sh2 sh2 sh2"
-          "sh3 sh3 sh3 sh3 sh3";
+          "sh3 sh3 sh3 sh3 sh3"
+          "sh2 sh2 sh2 sh2 sh2";
       }
 
       @include screen-large {
         grid-template-areas:
-          "sh2 sh2 sh2 sh2 sh2 sh2 sh2"
-          "sh3 sh3 sh3 sh3 sh3 sh3 sh3";
+          "sh3 sh3 sh3 sh3 sh3 sh3 sh3"
+          "sh2 sh2 sh2 sh2 sh2 sh2 sh2";
       }
     }
   }
@@ -281,8 +281,8 @@ footer {
       }
 
       grid-template-areas:
-        "co2"
         "co3"
+        "co2"
         "emp"
         "eml"
         "lip"
@@ -290,8 +290,8 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "co2 co2 co2"
           "co3 co3 co3"
+          "co2 co2 co2"
           "emp emp emp"
           "eml eml eml"
           "lip lip lip"
@@ -300,8 +300,8 @@ footer {
 
       @include screen-medium {
         grid-template-areas:
-          "co2 co2 co2 co2 co2"
           "co3 co3 co3 co3 co3"
+          "co2 co2 co2 co2 co2"
           "emp emp emp emp emp"
           "eml eml eml eml eml"
           "lip lip lip lip lip"
@@ -310,8 +310,8 @@ footer {
 
       @include screen-large {
         grid-template-areas:
-          "co2 co2 co2 co2 co2 co2 co2"
           "co3 co3 co3 co3 co3 co3 co3"
+          "co2 co2 co2 co2 co2 co2 co2"
           "emp emp emp emp emp emp emp"
           "eml eml eml eml eml eml eml"
           "lip lip lip lip lip lip lip"
