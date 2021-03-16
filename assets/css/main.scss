@@ -106,26 +106,80 @@ footer {
         grid-area: ab3;
       }
 
+      #about_code {
+        &_icon {
+          grid-area: coi;
+        }
+
+        &_paragraph {
+          grid-area: cop;
+        }
+      }
+
+      #about_cloud {
+        &_icon {
+          grid-area: cli;
+        }
+
+        &_paragraph {
+          grid-area: clp;
+        }
+      }
+
+      #about_saving {
+        &_icon {
+          grid-area: sai;
+        }
+
+        &_paragraph {
+          grid-area: sap;
+        }
+      }
+
       grid-template-areas:
         "ab2"
-        "ab3";
+        "ab3"
+        "coi"
+        "cop"
+        "cli"
+        "clp"
+        "sai"
+        "sap";
 
       @include screen-small {
         grid-template-areas:
           "ab2 ab2 ab2"
-          "ab3 ab3 ab3";
+          "ab3 ab3 ab3"
+          "coi coi coi"
+          "cop cop cop"
+          "cli cli cli"
+          "clp clp clp"
+          "sai sai sai"
+          "sap sap sap";
       }
 
       @include screen-medium {
         grid-template-areas:
           "ab2 ab2 ab2 ab2 ab2"
-          "ab3 ab3 ab3 ab3 ab3";
+          "ab3 ab3 ab3 ab3 ab3"
+          "coi coi coi coi coi"
+          "cop cop cop cop cop"
+          "cli cli cli cli cli"
+          "clp clp clp clp clp"
+          "sai sai sai sai sai"
+          "sap sap sap sap sap";
       }
 
       @include screen-large {
         grid-template-areas:
           "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
-          "ab3 ab3 ab3 ab3 ab3 ab3 ab3";
+          "ab3 ab3 ab3 ab3 ab3 ab3 ab3"
+          "coi coi coi coi coi coi coi"
+          "cop cop cop cop cop cop cop"
+          "cli cli cli cli cli cli cli"
+          "clp clp clp clp clp clp clp"
+          "sai sai sai sai sai sai sai"
+          "sap sap sap sap sap sap sap";
       }
     }
   }
