@@ -111,6 +111,10 @@ footer {
           grid-area: coi;
         }
 
+        &_heading {
+          grid-area: coh;
+        }
+
         &_paragraph {
           grid-area: cop;
         }
@@ -119,6 +123,10 @@ footer {
       #about_cloud {
         &_icon {
           grid-area: cli;
+        }
+
+        &_heading {
+          grid-area: clh;
         }
 
         &_paragraph {
@@ -131,6 +139,10 @@ footer {
           grid-area: sai;
         }
 
+        &_heading {
+          grid-area: sah;
+        }
+
         &_paragraph {
           grid-area: sap;
         }
@@ -140,10 +152,13 @@ footer {
         "ab2"
         "ab3"
         "coi"
+        "coh"
         "cop"
         "cli"
+        "clh"
         "clp"
         "sai"
+        "sah"
         "sap";
 
       @include screen-small {
@@ -151,10 +166,13 @@ footer {
           "ab2 ab2 ab2"
           "ab3 ab3 ab3"
           "coi coi coi"
+          "coh coh coh"
           "cop cop cop"
           "cli cli cli"
+          "clh clh clh"
           "clp clp clp"
           "sai sai sai"
+          "sah sah sah"
           "sap sap sap";
       }
 
@@ -163,10 +181,13 @@ footer {
           "ab2 ab2 ab2 ab2 ab2"
           "ab3 ab3 ab3 ab3 ab3"
           "coi coi coi coi coi"
+          "coh coh coh coh coh"
           "cop cop cop cop cop"
           "cli cli cli cli cli"
+          "clh clh clh clh clh"
           "clp clp clp clp clp"
           "sai sai sai sai sai"
+          "sah sah sah sah sah"
           "sap sap sap sap sap";
       }
 
@@ -175,10 +196,13 @@ footer {
           "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
           "ab3 ab3 ab3 ab3 ab3 ab3 ab3"
           "coi coi coi coi coi coi coi"
+          "coh coh coh coh coh coh coh"
           "cop cop cop cop cop cop cop"
           "cli cli cli cli cli cli cli"
+          "clh clh clh clh clh clh clh"
           "clp clp clp clp clp clp clp"
           "sai sai sai sai sai sai sai"
+          "sah sah sah sah sah sah sah"
           "sap sap sap sap sap sap sap";
       }
     }
