@@ -16,28 +16,40 @@
 
 footer {
   .container {
-    #copyright {
-      grid-area: cop;
+    #footer_copyright,
+    #footer_signature {
       text-align: center;
-      align-self: center;
+    }
+
+    #footer_copyright {
+      grid-area: foc;
+      align-self: end;
+    }
+
+    #footer_signature {
+      grid-area: fos;
     }
 
     grid-template-areas:
-      "cop";
+      "foc"
+      "fos";
 
     @include screen-small {
       grid-template-areas:
-        "cop cop cop";
+        "foc foc foc"
+        "fos fos fos";
     }
 
     @include screen-medium {
       grid-template-areas:
-        "cop cop cop cop cop";
+        "foc foc foc foc foc"
+        "fos fos fos fos fos";
     }
 
     @include screen-large {
       grid-template-areas:
-        "... cop cop cop cop cop ...";
+        "... foc foc foc foc foc ..."
+        "... fos fos fos fos fos ...";
     }
   }
 }
