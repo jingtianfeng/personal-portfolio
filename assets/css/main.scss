@@ -174,26 +174,66 @@ footer {
         grid-area: co3;
       }
 
+      #contact_email {
+        &_paragraph {
+          grid-area: emp;
+        }
+
+        &_link {
+          grid-area: eml;
+        }
+      }
+
+      #contact_linkedin {
+        &_paragraph {
+          grid-area: lip;
+        }
+
+        &_link {
+          grid-area: lil;
+          display: grid;
+          grid-template-columns: $icon2 1fr;
+          grid-column-gap: $nspace2;
+          align-items: center;
+        }
+      }
+
       grid-template-areas:
         "co2"
-        "co3";
+        "co3"
+        "emp"
+        "eml"
+        "lip"
+        "lil";
 
       @include screen-small {
         grid-template-areas:
           "co2 co2 co2"
-          "co3 co3 co3";
+          "co3 co3 co3"
+          "emp emp emp"
+          "eml eml eml"
+          "lip lip lip"
+          "lil lil lil";
       }
 
       @include screen-medium {
         grid-template-areas:
           "co2 co2 co2 co2 co2"
-          "co3 co3 co3 co3 co3";
+          "co3 co3 co3 co3 co3"
+          "emp emp emp emp emp"
+          "eml eml eml eml eml"
+          "lip lip lip lip lip"
+          "lil lil lil lil lil";
       }
 
       @include screen-large {
         grid-template-areas:
           "co2 co2 co2 co2 co2 co2 co2"
-          "co3 co3 co3 co3 co3 co3 co3";
+          "co3 co3 co3 co3 co3 co3 co3"
+          "emp emp emp emp emp emp emp"
+          "eml eml eml eml eml eml eml"
+          "lip lip lip lip lip lip lip"
+          "lil lil lil lil lil lil lil";
       }
     }
   }
