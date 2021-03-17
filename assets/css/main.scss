@@ -57,43 +57,44 @@ footer {
 #home {
   &_header {
     .container {
+      #header_portrait {
+        grid-area: hep;
+        align-self: end;
+      }
+
       #header_title {
         grid-area: he1;
-        align-self: end;
       }
 
       #header_sub {
         grid-area: he3;
-      }
-
-      #header_paragraph {
-        grid-area: hep;
+        text-align: end;
       }
 
       grid-template-areas:
+        "hep"
         "he1"
-        "he3"
-        "hep";
+        "he3";
 
       @include screen-small {
         grid-template-areas:
+          "hep hep hep"
           "he1 he1 he1"
-          "he3 he3 he3"
-          "hep hep hep";
+          "he3 he3 he3";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "he1 he1 he1 he1 he1"
-          "he3 he3 he3 he3 he3"
-          "hep hep hep hep hep";
+          "... hep hep hep ..."
+          "... he1 he1 he1 ..."
+          "... he3 he3 he3 ...";
       }
 
       @include screen-large {
         grid-template-areas:
-          "... he1 he1 he1 he1 he1 ..."
-          "... he3 he3 he3 he3 he3 ..."
-          "... hep hep hep hep hep ...";
+          "... ... hep hep hep ... ..."
+          "... ... he1 he1 he1 ... ..."
+          "... ... he3 he3 he3 ... ...";
       }
     }
   }
