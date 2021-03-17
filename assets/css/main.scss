@@ -99,21 +99,21 @@ footer {
     }
   }
 
-  &_about {
+  &_about1 {
     .container {
-      #about_title {
+      #about1_title {
         grid-area: ab2;
       }
 
-      #about_sub {
+      #about1_sub {
         grid-area: ab3;
       }
 
-      #about_number {
+      #about1_number {
         grid-area: abn;
       }
 
-      #about_code {
+      #about1_code {
         &_icon {
           grid-area: coi;
         }
@@ -127,7 +127,7 @@ footer {
         }
       }
 
-      #about_cloud {
+      #about1_cloud {
         &_icon {
           grid-area: cli;
         }
@@ -141,7 +141,7 @@ footer {
         }
       }
 
-      #about_saving {
+      #about1_saving {
         &_icon {
           grid-area: sai;
         }
@@ -219,17 +219,17 @@ footer {
     }
   }
 
-  &_showcase {
+  &_showcase1 {
     .container {
-      #showcase_title {
+      #showcase1_title {
         grid-area: sh2;
       }
 
-      #showcase_sub {
+      #showcase1_sub {
         grid-area: sh3;
       }
 
-      #showcase_number {
+      #showcase1_number {
         grid-area: shn;
       }
 
@@ -261,29 +261,29 @@ footer {
     }
   }
 
-  &_contact {
+  &_contact1 {
     .container {
-      #contact_title {
+      #contact1_title {
         grid-area: co2;
       }
 
-      #contact_sub {
+      #contact1_sub {
         grid-area: co3;
       }
 
-      #contact_number {
+      #contact1_number {
         grid-area: con;
       }
 
-      #contact_email_link,
-      #contact_linkedin_link {
+      #contact1_email_link,
+      #contact1_linkedin_link {
         display: grid;
         grid-template-columns: $icon2 1fr;
         grid-column-gap: $nspace2;
         align-items: center;
       }
 
-      #contact_email {
+      #contact1_email {
         &_paragraph {
           grid-area: emp;
         }
@@ -293,7 +293,7 @@ footer {
         }
       }
 
-      #contact_linkedin {
+      #contact1_linkedin {
         &_paragraph {
           grid-area: lip;
         }
