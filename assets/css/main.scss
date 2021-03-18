@@ -16,40 +16,28 @@
 
 footer {
   .container {
-    #footer_copyright,
-    #footer_signature {
+    #footer_copyright {
+      grid-area: foc;
+      align-self: center;
       text-align: center;
     }
 
-    #footer_copyright {
-      grid-area: foc;
-      align-self: end;
-    }
-
-    #footer_signature {
-      grid-area: fos;
-    }
-
     grid-template-areas:
-      "foc"
-      "fos";
+      "foc";
 
     @include screen-small {
       grid-template-areas:
-        "foc foc foc"
-        "fos fos fos";
+        "foc foc foc";
     }
 
     @include screen-medium {
       grid-template-areas:
-        "foc foc foc foc foc"
-        "fos fos fos fos fos";
+        "... foc foc foc ...";
     }
 
     @include screen-large {
       grid-template-areas:
-        "... foc foc foc foc foc ..."
-        "... fos fos fos fos fos ...";
+        "... ... foc foc foc ... ...";
     }
   }
 }
@@ -290,28 +278,6 @@ footer {
           "eml eml eml"
           "lip lip lip"
           "lil lil lil";
-      }
-
-      @include screen-medium {
-        grid-template-areas:
-          "co3 co3 co3 co3 co3"
-          "con con con con con"
-          "co2 co2 co2 co2 co2"
-          "emp emp emp emp emp"
-          "eml eml eml eml eml"
-          "lip lip lip lip lip"
-          "lil lil lil lil lil";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "co3 co3 co3 co3 co3 co3 co3"
-          "con con con con con con con"
-          "co2 co2 co2 co2 co2 co2 co2"
-          "emp emp emp emp emp emp emp"
-          "eml eml eml eml eml eml eml"
-          "lip lip lip lip lip lip lip"
-          "lil lil lil lil lil lil lil";
       }
     }
   }
