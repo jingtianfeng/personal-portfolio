@@ -104,28 +104,28 @@ footer {
 
       grid-template-areas:
         "at2"
-        "as1"
-        "anb";
+        "anb"
+        "as1";
 
       @include screen-small {
         grid-template-areas:
           "at2 at2 at2"
-          "as1 as1 as1"
-          "anb anb anb";
+          "anb anb anb"
+          "as1 as1 as1";
       }
 
       @include screen-medium {
         grid-template-areas:
           "at2 at2 at2 at2 at2"
-          "as1 as1 as1 as1 as1"
-          "anb anb anb anb anb";
+          "anb anb anb anb anb"
+          "as1 as1 as1 as1 as1";
       }
 
       @include screen-large {
         grid-template-areas:
           "at2 at2 at2 at2 at2 at2 at2"
-          "as1 as1 as1 as1 as1 as1 as1"
-          "anb anb anb anb anb anb anb";
+          "anb anb anb anb anb anb anb"
+          "as1 as1 as1 as1 as1 as1 as1";
       }
     }
   }
@@ -191,29 +191,29 @@ footer {
       }
 
       grid-template-areas:
-        "ss1"
+        "st2"
         "snb"
-        "st2";
+        "ss1";
 
       @include screen-small {
         grid-template-areas:
-          "ss1 ss1 ss1"
+          "st2 st2 st2"
           "snb snb snb"
-          "st2 st2 st2";
+          "ss1 ss1 ss1";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "ss1 ss1 ss1 ss1 ss1"
+          "st2 st2 st2 st2 st2"
           "snb snb snb snb snb"
-          "st2 st2 st2 st2 st2";
+          "ss1 ss1 ss1 ss1 ss1";
       }
 
       @include screen-large {
         grid-template-areas:
-          "ss1 ss1 ss1 ss1 ss1 ss1 ss1"
+          "st2 st2 st2 st2 st2 st2 st2"
           "snb snb snb snb snb snb snb"
-          "st2 st2 st2 st2 st2 st2 st2";
+          "ss1 ss1 ss1 ss1 ss1 ss1 ss1";
       }
     }
   }
@@ -261,9 +261,9 @@ footer {
       }
 
       grid-template-areas:
-        "cs1"
-        "cnb"
         "ct2"
+        "cnb"
+        "cs1"
         "emp"
         "eml"
         "lip"
@@ -271,9 +271,9 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "cs1 cs1 cs1"
-          "cnb cnb cnb"
           "ct2 ct2 ct2"
+          "cnb cnb cnb"
+          "cs1 cs1 cs1"
           "emp emp emp"
           "eml eml eml"
           "lip lip lip"
