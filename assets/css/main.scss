@@ -57,44 +57,45 @@ footer {
 #home {
   &_header {
     .container {
-      #header_portrait {
-        grid-area: hep;
+      #header_title {
+        grid-area: ht1;
         align-self: end;
       }
 
-      #header_title {
-        grid-area: he1;
+      #header_sub1,
+      #header_sub2 {
+        align-self: end;
       }
 
-      #header_sub {
-        grid-area: he3;
-        text-align: end;
+      #header_sub1 {
+        grid-area: hs1;
+      }
+
+      #header_sub2 {
+        grid-area: hs2;
       }
 
       grid-template-areas:
-        "hep"
-        "he1"
-        "he3";
+        "ht1"
+        "hs1"
+        "hs2";
 
       @include screen-small {
         grid-template-areas:
-          "hep hep hep"
-          "he1 he1 he1"
-          "he3 he3 he3";
+          "ht1 ht1 ht1"
+          "hs1 ... hs2";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "... hep hep hep ..."
-          "... he1 he1 he1 ..."
-          "... he3 he3 he3 ...";
+          "... ht1 ht1 ht1 ..."
+          "... hs1 ... hs2 ...";
       }
 
       @include screen-large {
         grid-template-areas:
-          "... ... hep hep hep ... ..."
-          "... ... he1 he1 he1 ... ..."
-          "... ... he3 he3 he3 ... ...";
+          "... ... ht1 ht1 ht1 ... ..."
+          "... ... hs1 ... hs2 ... ...";
       }
     }
   }
@@ -102,119 +103,87 @@ footer {
   &_about1 {
     .container {
       #about1_title {
-        grid-area: ab2;
+        grid-area: at2;
       }
 
       #about1_sub {
-        grid-area: ab3;
+        grid-area: as1;
       }
 
       #about1_number {
-        grid-area: abn;
-      }
-
-      #about1_code {
-        &_icon {
-          grid-area: coi;
-        }
-
-        &_heading {
-          grid-area: coh;
-        }
-
-        &_paragraph {
-          grid-area: cop;
-        }
-      }
-
-      #about1_cloud {
-        &_icon {
-          grid-area: cli;
-        }
-
-        &_heading {
-          grid-area: clh;
-        }
-
-        &_paragraph {
-          grid-area: clp;
-        }
-      }
-
-      #about1_saving {
-        &_icon {
-          grid-area: sai;
-        }
-
-        &_heading {
-          grid-area: sah;
-        }
-
-        &_paragraph {
-          grid-area: sap;
-        }
+        grid-area: anb;
       }
 
       grid-template-areas:
-        "ab3"
-        "abn"
-        "ab2"
-        "coi"
-        "coh"
-        "cop"
-        "cli"
-        "clh"
-        "clp"
-        "sai"
-        "sah"
-        "sap";
+        "at2"
+        "as1"
+        "anb";
 
       @include screen-small {
         grid-template-areas:
-          "ab3 ab3 ab3"
-          "abn abn abn"
-          "ab2 ab2 ab2"
-          "coi coi coi"
-          "coh coh coh"
-          "cop cop cop"
-          "cli cli cli"
-          "clh clh clh"
-          "clp clp clp"
-          "sai sai sai"
-          "sah sah sah"
-          "sap sap sap";
+          "at2 at2 at2"
+          "as1 as1 as1"
+          "anb anb anb";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "ab3 ab3 ab3 ab3 ab3"
-          "abn abn abn abn abn"
-          "ab2 ab2 ab2 ab2 ab2"
-          "coi coi coi coi coi"
-          "coh coh coh coh coh"
-          "cop cop cop cop cop"
-          "cli cli cli cli cli"
-          "clh clh clh clh clh"
-          "clp clp clp clp clp"
-          "sai sai sai sai sai"
-          "sah sah sah sah sah"
-          "sap sap sap sap sap";
+          "at2 at2 at2 at2 at2"
+          "as1 as1 as1 as1 as1"
+          "anb anb anb anb anb";
       }
 
       @include screen-large {
         grid-template-areas:
-          "ab3 ab3 ab3 ab3 ab3 ab3 ab3"
-          "abn abn abn abn abn abn abn"
-          "ab2 ab2 ab2 ab2 ab2 ab2 ab2"
-          "coi coi coi coi coi coi coi"
-          "coh coh coh coh coh coh coh"
-          "cop cop cop cop cop cop cop"
-          "cli cli cli cli cli cli cli"
-          "clh clh clh clh clh clh clh"
-          "clp clp clp clp clp clp clp"
-          "sai sai sai sai sai sai sai"
-          "sah sah sah sah sah sah sah"
-          "sap sap sap sap sap sap sap";
+          "at2 at2 at2 at2 at2 at2 at2"
+          "as1 as1 as1 as1 as1 as1 as1"
+          "anb anb anb anb anb anb anb";
+      }
+    }
+  }
+
+  &_about2,
+  &_about3,
+  &_about4 {
+    .container {
+      .about {
+        &_icon {
+          grid-area: aic;
+        }
+
+        &_heading {
+          grid-area: ahe;
+        }
+
+        &_paragraph {
+          grid-area: apa;
+        }
+      }
+
+      grid-template-areas:
+          "aic"
+          "ahe"
+          "apa";
+
+      @include screen-small {
+        grid-template-areas:
+            "aic aic aic"
+            "ahe ahe ahe"
+            "apa apa apa";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "aic aic aic aic aic"
+          "ahe ahe ahe ahe ahe"
+          "apa apa apa apa apa";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "aic aic aic aic aic aic aic"
+          "ahe ahe ahe ahe ahe ahe ahe"
+          "apa apa apa apa apa apa apa";
       }
     }
   }
@@ -222,41 +191,41 @@ footer {
   &_showcase1 {
     .container {
       #showcase1_title {
-        grid-area: sh2;
+        grid-area: st2;
       }
 
       #showcase1_sub {
-        grid-area: sh3;
+        grid-area: ss1;
       }
 
       #showcase1_number {
-        grid-area: shn;
+        grid-area: snb;
       }
 
       grid-template-areas:
-        "sh3"
-        "shn"
-        "sh2";
+        "ss1"
+        "snb"
+        "st2";
 
       @include screen-small {
         grid-template-areas:
-          "sh3 sh3 sh3"
-          "shn shn shn"
-          "sh2 sh2 sh2";
+          "ss1 ss1 ss1"
+          "snb snb snb"
+          "st2 st2 st2";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "sh3 sh3 sh3 sh3 sh3"
-          "shn shn shn shn shn"
-          "sh2 sh2 sh2 sh2 sh2";
+          "ss1 ss1 ss1 ss1 ss1"
+          "snb snb snb snb snb"
+          "st2 st2 st2 st2 st2";
       }
 
       @include screen-large {
         grid-template-areas:
-          "sh3 sh3 sh3 sh3 sh3 sh3 sh3"
-          "shn shn shn shn shn shn shn"
-          "sh2 sh2 sh2 sh2 sh2 sh2 sh2";
+          "ss1 ss1 ss1 ss1 ss1 ss1 ss1"
+          "snb snb snb snb snb snb snb"
+          "st2 st2 st2 st2 st2 st2 st2";
       }
     }
   }
@@ -264,15 +233,15 @@ footer {
   &_contact1 {
     .container {
       #contact1_title {
-        grid-area: co2;
+        grid-area: ct2;
       }
 
       #contact1_sub {
-        grid-area: co3;
+        grid-area: cs1;
       }
 
       #contact1_number {
-        grid-area: con;
+        grid-area: cnb;
       }
 
       #contact1_email_link,
@@ -304,9 +273,9 @@ footer {
       }
 
       grid-template-areas:
-        "co3"
-        "con"
-        "co2"
+        "cs1"
+        "cnb"
+        "ct2"
         "emp"
         "eml"
         "lip"
@@ -314,9 +283,9 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "co3 co3 co3"
-          "con con con"
-          "co2 co2 co2"
+          "cs1 cs1 cs1"
+          "cnb cnb cnb"
+          "ct2 ct2 ct2"
           "emp emp emp"
           "eml eml eml"
           "lip lip lip"
