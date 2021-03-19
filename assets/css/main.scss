@@ -45,46 +45,65 @@ footer {
 #home {
   &_header {
     .container {
-      #header_title {
-        grid-area: ht1;
-        align-self: end;
-      }
+      grid-template-rows: auto max-content;
 
-      #header_sub1,
-      #header_sub2 {
-        align-self: end;
-      }
+      #header {
+        &_title {
+          grid-area: ht1;
+          align-self: end;
+        }
 
-      #header_sub1 {
-        grid-area: hs1;
-      }
+        &_sub {
+          grid-area: hsu;
+          align-self: end;
+          display: grid;
+          border-top: 1px solid $color-depth;
+          padding-top: $nspace3;
 
-      #header_sub2 {
-        grid-area: hs2;
-        text-align: end;
+          #header_sub1,
+          #header_sub2 {
+            align-self: end;
+          }
+
+          #header_sub1 {
+            grid-area: hs1;
+            max-width: 12ch;
+            margin-right: auto;
+          }
+
+          #header_sub2 {
+            grid-area: hs2;
+            max-width: 8ch;
+            text-align: end;
+            margin-left: auto;
+            font-style: italic;
+          }
+
+          grid-template-areas:
+            "hs1 hs2";
+        }
       }
 
       grid-template-areas:
         "ht1"
-        "hs1"
-        "hs2";
+        "hsu";
 
       @include screen-small {
         grid-template-areas:
           "ht1 ht1 ht1"
-          "hs1 ... hs2";
+          "hsu hsu hsu";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "... ht1 ht1 ht1 ..."
-          "... hs1 ... hs2 ...";
+          "ht1 ht1 ht1 ht1 ht1"
+          "hsu hsu hsu hsu hsu";
       }
 
       @include screen-large {
         grid-template-areas:
-          "... ... ht1 ht1 ht1 ... ..."
-          "... ... hs1 ... hs2 ... ...";
+          "ht1 ht1 ht1 ht1 ht1 ht1 ht1"
+          "hsu hsu hsu hsu hsu hsu hsu";
       }
     }
   }
