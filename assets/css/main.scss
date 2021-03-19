@@ -118,34 +118,20 @@ footer {
         grid-area: as1;
       }
 
-      #about1_number {
-        grid-area: anb;
+      #about1_deco {
+        grid-area: ade;
       }
 
       grid-template-areas:
+        "ade"
         "at2"
-        "anb"
         "as1";
 
       @include screen-small {
         grid-template-areas:
+          "ade ade ade"
           "at2 at2 at2"
-          "anb anb anb"
           "as1 as1 as1";
-      }
-
-      @include screen-medium {
-        grid-template-areas:
-          "at2 at2 at2 at2 at2"
-          "anb anb anb anb anb"
-          "as1 as1 as1 as1 as1";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "at2 at2 at2 at2 at2 at2 at2"
-          "anb anb anb anb anb anb anb"
-          "as1 as1 as1 as1 as1 as1 as1";
       }
     }
   }
@@ -179,20 +165,6 @@ footer {
             "ahe ahe ahe"
             "apa apa apa";
       }
-
-      @include screen-medium {
-        grid-template-areas:
-          "aic aic aic aic aic"
-          "ahe ahe ahe ahe ahe"
-          "apa apa apa apa apa";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "aic aic aic aic aic aic aic"
-          "ahe ahe ahe ahe ahe ahe ahe"
-          "apa apa apa apa apa apa apa";
-      }
     }
   }
 
@@ -206,34 +178,20 @@ footer {
         grid-area: ss1;
       }
 
-      #showcase1_number {
-        grid-area: snb;
+      #showcase1_deco {
+        grid-area: sde;
       }
 
       grid-template-areas:
+        "sde"
         "st2"
-        "snb"
         "ss1";
 
       @include screen-small {
         grid-template-areas:
+          "sde sde sde"
           "st2 st2 st2"
-          "snb snb snb"
           "ss1 ss1 ss1";
-      }
-
-      @include screen-medium {
-        grid-template-areas:
-          "st2 st2 st2 st2 st2"
-          "snb snb snb snb snb"
-          "ss1 ss1 ss1 ss1 ss1";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "st2 st2 st2 st2 st2 st2 st2"
-          "snb snb snb snb snb snb snb"
-          "ss1 ss1 ss1 ss1 ss1 ss1 ss1";
       }
     }
   }
@@ -248,8 +206,8 @@ footer {
         grid-area: cs1;
       }
 
-      #contact1_number {
-        grid-area: cnb;
+      #contact1_deco {
+        grid-area: cde;
       }
 
       #contact1_email_link,
@@ -281,8 +239,8 @@ footer {
       }
 
       grid-template-areas:
+        "cde"
         "ct2"
-        "cnb"
         "cs1"
         "emp"
         "eml"
@@ -291,8 +249,8 @@ footer {
 
       @include screen-small {
         grid-template-areas:
+          "cde cde cde"
           "ct2 ct2 ct2"
-          "cnb cnb cnb"
           "cs1 cs1 cs1"
           "emp emp emp"
           "eml eml eml"
