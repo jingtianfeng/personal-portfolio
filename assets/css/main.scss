@@ -220,6 +220,10 @@ footer {
         border: 1px solid $color-text-deco;
         border-radius: $border-radius;
         padding: $nspace3;
+
+        &:hover {
+          border-color: $color-text;
+        }
       }
 
       #contact1_email {
