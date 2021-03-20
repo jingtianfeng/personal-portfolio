@@ -57,7 +57,7 @@ footer {
           grid-area: hsu;
           align-self: end;
           display: grid;
-          border-top: 1px solid $color-depth;
+          border-top: 1px solid $color-text-deco;
           padding-top: $nspace3;
 
           #header_sub1,
@@ -216,6 +216,10 @@ footer {
         grid-template-columns: $icon2 1fr;
         grid-column-gap: $nspace2;
         align-items: center;
+        max-width: max-content;
+        border: 1px solid $color-text-deco;
+        border-radius: $border-radius;
+        padding: $nspace3;
       }
 
       #contact1_email {
