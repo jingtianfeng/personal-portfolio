@@ -1,6 +1,22 @@
 ---
 ---
 
+@font-face {
+  src: url("/assets/fonts/crimson-text/CrimsonText-Regular.ttf");
+  font-family: "Crimson Text";
+}
+
+@font-face {
+  src: url("/assets/fonts/crimson-text/CrimsonText-Italic.ttf");
+  font-family: "Crimson Text";
+  font-style: italic;
+}
+
+@font-face {
+  src: url("/assets/fonts/julius-sans-one/JuliusSansOne-Regular.ttf");
+  font-family: "Julius Sans One";
+}
+
 @import "main";
 
 footer {
