@@ -150,6 +150,42 @@ footer {
     }
   }
 
+  &_showcase2 {
+    .container {
+      grid-template-rows: 1fr min-content min-content;
+
+      .showcase_img {
+        grid-area: shi;
+        align-self: end;
+      }
+
+      .showcase_paragraph {
+        grid-area: shp;
+      }
+
+      .showcase_link {
+        grid-area: shl;
+        max-width: max-content;
+        border: 1px solid $color-text-deco;
+        border-radius: $border-radius;
+        padding: $nspace2 $nspace3;
+        font-size: $h5-font-size;
+      }
+
+      grid-template-areas:
+        "shi"
+        "shp"
+        "shl";
+
+      @include screen-small {
+        grid-template-areas:
+          "shi shi shi"
+          "shp shp shp"
+          "shl shl shl";
+      }
+    }
+  }
+
   &_about1 {
     .container {
       #about1_title {
@@ -233,7 +269,7 @@ footer {
         max-width: max-content;
         border: 1px solid $color-text-deco;
         border-radius: $border-radius;
-        padding: $nspace3;
+        padding: $nspace2 $nspace3;
 
         &:hover {
           border-color: $color-text;
