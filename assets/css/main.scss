@@ -122,6 +122,34 @@ footer {
     }
   }
 
+  &_showcase1 {
+    .container {
+      #showcase1_title {
+        grid-area: st2;
+      }
+
+      #showcase1_sub {
+        grid-area: ss1;
+      }
+
+      #showcase1_deco {
+        grid-area: sde;
+      }
+
+      grid-template-areas:
+        "sde"
+        "st2"
+        "ss1";
+
+      @include screen-small {
+        grid-template-areas:
+          "sde sde sde"
+          "st2 st2 st2"
+          "ss1 ss1 ss1";
+      }
+    }
+  }
+
   &_about1 {
     .container {
       #about1_title {
@@ -178,34 +206,6 @@ footer {
             "aic aic aic"
             "ahe ahe ahe"
             "apa apa apa";
-      }
-    }
-  }
-
-  &_showcase1 {
-    .container {
-      #showcase1_title {
-        grid-area: st2;
-      }
-
-      #showcase1_sub {
-        grid-area: ss1;
-      }
-
-      #showcase1_deco {
-        grid-area: sde;
-      }
-
-      grid-template-areas:
-        "sde"
-        "st2"
-        "ss1";
-
-      @include screen-small {
-        grid-template-areas:
-          "sde sde sde"
-          "st2 st2 st2"
-          "ss1 ss1 ss1";
       }
     }
   }
