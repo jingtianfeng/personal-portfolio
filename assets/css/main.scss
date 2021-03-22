@@ -122,18 +122,39 @@ footer {
     }
   }
 
-  &_showcase1 {
+  &_showcase1,
+  &_about1,
+  &_contact1 {
     .container {
-      #showcase1_title {
+      grid-template-rows: 1fr min-content 1fr;
+
+      .section_title,
+      .section_sub,
+      .section_deco {
+        text-align: center;
+      }
+
+      .section_title {
         grid-area: st2;
+        border-top: 1px solid $color-text-deco;
+        border-bottom: 1px solid $color-text-deco;
+        padding: $nspace3 0;
       }
 
-      #showcase1_sub {
+      .section_sub {
         grid-area: ss1;
+        letter-spacing: 2px;
       }
 
-      #showcase1_deco {
+      .section_deco {
         grid-area: sde;
+        max-width: 20ch;
+        margin: 0 auto;
+        border: 1px solid $color-text-deco;
+        border-radius: $border-radius;
+        padding: $nspace1 $nspace1 $nspace1 $nspace1+8px;
+        align-self: end;
+        letter-spacing: 8px;
       }
 
       grid-template-areas:
@@ -168,8 +189,9 @@ footer {
         max-width: max-content;
         border: 1px solid $color-text-deco;
         border-radius: $border-radius;
-        padding: $nspace2 $nspace3;
+        padding: $nspace2 $nspace3 $nspace2 $nspace3+2px;
         font-size: $h5-font-size;
+        letter-spacing: 2px;
       }
 
       grid-template-areas:
@@ -182,34 +204,6 @@ footer {
           "shi shi shi"
           "shp shp shp"
           "shl shl shl";
-      }
-    }
-  }
-
-  &_about1 {
-    .container {
-      #about1_title {
-        grid-area: at2;
-      }
-
-      #about1_sub {
-        grid-area: as1;
-      }
-
-      #about1_deco {
-        grid-area: ade;
-      }
-
-      grid-template-areas:
-        "ade"
-        "at2"
-        "as1";
-
-      @include screen-small {
-        grid-template-areas:
-          "ade ade ade"
-          "at2 at2 at2"
-          "as1 as1 as1";
       }
     }
   }
@@ -246,22 +240,12 @@ footer {
     }
   }
 
-  &_contact1 {
+  &_contact2 {
     .container {
-      #contact1_title {
-        grid-area: ct2;
-      }
+      grid-template-rows: 1fr min-content 1fr min-content;
 
-      #contact1_sub {
-        grid-area: cs1;
-      }
-
-      #contact1_deco {
-        grid-area: cde;
-      }
-
-      #contact1_email_link,
-      #contact1_linkedin_link {
+      #contact2_email_link,
+      #contact2_linkedin_link {
         display: grid;
         grid-template-columns: $icon2 1fr;
         grid-column-gap: $nspace2;
@@ -276,7 +260,7 @@ footer {
         }
       }
 
-      #contact1_email {
+      #contact2_email {
         &_paragraph {
           grid-area: emp;
         }
@@ -286,7 +270,7 @@ footer {
         }
       }
 
-      #contact1_linkedin {
+      #contact2_linkedin {
         &_paragraph {
           grid-area: lip;
         }
@@ -297,9 +281,6 @@ footer {
       }
 
       grid-template-areas:
-        "cde"
-        "ct2"
-        "cs1"
         "emp"
         "eml"
         "lip"
@@ -307,9 +288,6 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "cde cde cde"
-          "ct2 ct2 ct2"
-          "cs1 cs1 cs1"
           "emp emp emp"
           "eml eml eml"
           "lip lip lip"
