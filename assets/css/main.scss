@@ -2,19 +2,29 @@
 ---
 
 @font-face {
-  src: url("/assets/fonts/crimson-text/CrimsonText-Regular.ttf");
-  font-family: "Crimson Text";
+  src: url("/assets/fonts/calibre-regular.woff");
+  font-family: "Calibre";
+  font-weight: 400;
 }
 
 @font-face {
-  src: url("/assets/fonts/crimson-text/CrimsonText-Italic.ttf");
-  font-family: "Crimson Text";
+  src: url("/assets/fonts/calibre-regular-italic.woff");
+  font-family: "Calibre";
   font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
-  src: url("/assets/fonts/julius-sans-one/JuliusSansOne-Regular.ttf");
-  font-family: "Julius Sans One";
+  src: url("/assets/fonts/calibre-bold.woff");
+  font-family: "Calibre";
+  font-weight: 700;
+}
+
+@font-face {
+  src: url("/assets/fonts/calibre-bold-italic.woff");
+  font-family: "Calibre";
+  font-style: italic;
+  font-weight: 700;
 }
 
 @import "main";
@@ -78,7 +88,7 @@ footer {
 
           #header_sub2 {
             grid-area: hs2;
-            max-width: 4ch;
+            max-width: 8ch;
             text-align: end;
             margin-left: auto;
           }
