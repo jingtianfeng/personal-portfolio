@@ -257,13 +257,30 @@ footer {
   &_about3,
   &_about4 {
     .container {
+      grid-template-rows: 1fr min-content min-content 1fr;
+
       .about {
         &_icon {
           grid-area: aic;
+          height: $icon5;
+          width: 100%;
+          margin: auto auto 0 auto;
+
+          > g > path,
+          > g > circle {
+            fill: none;
+            stroke: $color-text;
+          }
+        }
+
+        &_heading,
+        &_paragraph {
+          text-align: center;
         }
 
         &_heading {
           grid-area: ahe;
+          align-self: end;
         }
 
         &_paragraph {
@@ -279,8 +296,37 @@ footer {
       @include screen-small {
         grid-template-areas:
             "aic aic aic"
+            "... ... ..."
             "ahe ahe ahe"
             "apa apa apa";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... aic aic aic ..."
+          "... ... ... ... ..."
+          "... ahe ahe ahe ..."
+          "... apa apa apa ...";
+      }
+
+      @include screen-large {
+        grid-template-rows: 1fr 1.5fr;
+        grid-column-gap: $nspace4;
+
+        .about_icon {
+          align-self: center;
+          margin: auto 0 auto auto;
+        }
+
+        .about_heading,
+        .about_paragraph {
+          text-align: left;
+          max-width: 40ch;
+        }
+
+        grid-template-areas:
+          "aic aic aic ahe ahe ahe ahe"
+          "aic aic aic apa apa apa apa";
       }
     }
   }
