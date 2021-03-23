@@ -148,7 +148,6 @@ footer {
 
       .section_deco {
         grid-area: sde;
-        max-width: 20ch;
         margin: 0 auto;
         border: 1px solid $color-text-deco;
         border-radius: $border-radius;
@@ -167,6 +166,20 @@ footer {
           "sde sde sde"
           "st2 st2 st2"
           "ss1 ss1 ss1";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... sde sde sde ..."
+          "... st2 st2 st2 ..."
+          "... ss1 ss1 ss1 ...";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "... ... sde sde sde ... ..."
+          "... st2 st2 st2 st2 st2 ..."
+          "... ss1 ss1 ss1 ss1 ss1 ...";
       }
     }
   }
