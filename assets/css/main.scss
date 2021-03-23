@@ -333,18 +333,24 @@ footer {
 
   &_contact2 {
     .container {
-      grid-template-rows: 1fr min-content 1fr min-content;
+      grid-template-rows: 1fr repeat(5, min-content) 1fr;
+
+      #contact2_email_text,
+      #contact2_github_text {
+        align-self: end;
+        margin-left: calc(#{$nspace3} + #{$icon2} + #{$nspace3});
+      }
 
       #contact2_email_link,
-      #contact2_linkedin_link {
+      #contact2_github_link {
+        align-self: start;
         display: grid;
         grid-template-columns: $icon2 1fr;
-        grid-column-gap: $nspace2;
+        grid-column-gap: $nspace3;
         align-items: center;
         max-width: max-content;
-        border: 1px solid $color-text-deco;
-        border-radius: $border-radius;
-        padding: $nspace2 $nspace3;
+        margin-left: $nspace3;
+        text-decoration: underline;
 
         &:hover {
           border-color: $color-text;
@@ -352,8 +358,8 @@ footer {
       }
 
       #contact2_email {
-        &_paragraph {
-          grid-area: emp;
+        &_text {
+          grid-area: emt;
         }
 
         &_link {
@@ -361,28 +367,64 @@ footer {
         }
       }
 
-      #contact2_linkedin {
-        &_paragraph {
-          grid-area: lip;
+      #contact2_github {
+        &_text {
+          grid-area: git;
         }
 
         &_link {
-          grid-area: lil;
+          grid-area: gil;
         }
       }
 
       grid-template-areas:
-        "emp"
+        "emt"
         "eml"
-        "lip"
-        "lil";
+        "..."
+        "..."
+        "..."
+        "git"
+        "gil";
 
       @include screen-small {
         grid-template-areas:
-          "emp emp emp"
+          "emt emt emt"
           "eml eml eml"
-          "lip lip lip"
-          "lil lil lil";
+          "... ... ..."
+          "... ... ..."
+          "... ... ..."
+          "git git git"
+          "gil gil gil";
+      }
+
+      @include screen-medium {
+        grid-template-rows: 1fr repeat(5, min-content) 1fr;
+        grid-column-gap: $nspace4;
+
+        #contact2_email_text,
+        #contact2_github_text {
+          align-self: center;
+        }
+
+        grid-template-areas:
+          "... ... ... ... ..."
+          "emt emt eml eml eml"
+          "... ... ... ... ..."
+          "... ... ... ... ..."
+          "... ... ... ... ..."
+          "git git gil gil gil"
+          "... ... ... ... ...";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "... ... ... ... ... ... ..."
+          "emt emt emt eml eml eml ..."
+          "... ... ... ... ... ... ..."
+          "... ... ... ... ... ... ..."
+          "... ... ... ... ... ... ..."
+          "git git git gil gil gil ..."
+          "... ... ... ... ... ... ...";
       }
     }
   }
