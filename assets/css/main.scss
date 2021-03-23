@@ -124,7 +124,8 @@ footer {
 
   &_showcase1,
   &_about1,
-  &_contact1 {
+  &_contact1,
+  &_skill1 {
     .container {
       grid-template-rows: 1fr min-content 1fr;
 
@@ -327,6 +328,72 @@ footer {
         grid-template-areas:
           "aic aic aic ahe ahe ahe ahe"
           "aic aic aic apa apa apa apa";
+      }
+    }
+  }
+
+  &_skill2 {
+    .container {
+      #skill2_html {
+        &_icon {
+          grid-area: hti;
+        }
+
+        &_heading {
+          grid-area: hth;
+        }
+      }
+
+      #skill2_sass {
+        &_icon {
+          grid-area: sai;
+        }
+
+        &_heading {
+          grid-area: sah;
+        }
+      }
+
+      #skill2_js {
+        &_icon {
+          grid-area: jsi;
+        }
+
+        &_heading {
+          grid-area: jsh;
+        }
+      }
+
+      #skill2_go {
+        &_icon {
+          grid-area: goi;
+        }
+
+        &_heading {
+          grid-area: goh;
+        }
+      }
+
+      grid-template-areas:
+        "hti"
+        "hth"
+        "sai"
+        "sah"
+        "jsi"
+        "jsh"
+        "goi"
+        "goh";
+
+      @include screen-small {
+        grid-template-areas:
+          "hti hti hti"
+          "hth hth hth"
+          "sai sai sai"
+          "sah sah sah"
+          "jsi jsi jsi"
+          "jsh jsh jsh"
+          "goi goi goi"
+          "goh goh goh";
       }
     }
   }
