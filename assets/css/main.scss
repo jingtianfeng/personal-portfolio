@@ -334,6 +334,10 @@ footer {
 
   &_skill2 {
     .container {
+      #skill2_title {
+        grid-area: skt;
+      }
+
       #skill2_html {
         &_icon {
           grid-area: hti;
@@ -341,6 +345,10 @@ footer {
 
         &_heading {
           grid-area: hth;
+        }
+
+        &_paragraph {
+          grid-area: htp;
         }
       }
 
@@ -352,9 +360,41 @@ footer {
         &_heading {
           grid-area: sah;
         }
+
+        &_paragraph {
+          grid-area: sap;
+        }
       }
 
-      #skill2_js {
+      grid-template-areas:
+        "skt"
+        "hti"
+        "hth"
+        "htp"
+        "sai"
+        "sah"
+        "sap";
+
+      @include screen-small {
+        grid-template-areas:
+          "skt skt skt"
+          "hti hti hti"
+          "hth hth hth"
+          "htp htp htp"
+          "sai sai sai"
+          "sah sah sah"
+          "sap sap sap";
+      }
+    }
+  }
+
+  &_skill3 {
+    .container {
+      #skill3_title {
+        grid-area: skt;
+      }
+
+      #skill3_js {
         &_icon {
           grid-area: jsi;
         }
@@ -362,9 +402,13 @@ footer {
         &_heading {
           grid-area: jsh;
         }
+
+        &_paragraph {
+          grid-area: jsp;
+        }
       }
 
-      #skill2_go {
+      #skill3_go {
         &_icon {
           grid-area: goi;
         }
@@ -372,28 +416,30 @@ footer {
         &_heading {
           grid-area: goh;
         }
+
+        &_paragraph {
+          grid-area: gop;
+        }
       }
 
       grid-template-areas:
-        "hti"
-        "hth"
-        "sai"
-        "sah"
+        "skt"
         "jsi"
         "jsh"
+        "jsp"
         "goi"
-        "goh";
+        "goh"
+        "gop";
 
       @include screen-small {
         grid-template-areas:
-          "hti hti hti"
-          "hth hth hth"
-          "sai sai sai"
-          "sah sah sah"
+          "skt skt skt"
           "jsi jsi jsi"
           "jsh jsh jsh"
+          "jsp jsp jsp"
           "goi goi goi"
-          "goh goh goh";
+          "goh goh goh"
+          "gop gop gop";
       }
     }
   }
