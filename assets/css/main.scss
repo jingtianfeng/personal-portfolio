@@ -205,6 +205,10 @@ footer {
         padding: $nspace2 $nspace3 $nspace2 $nspace3+2px;
         font-size: $h5-font-size;
         letter-spacing: 2px;
+
+        &:hover {
+          border-color: $color-text;
+        }
       }
 
       grid-template-areas:
@@ -217,6 +221,34 @@ footer {
           "shi shi shi"
           "shp shp shp"
           "shl shl shl";
+      }
+
+      @include screen-medium {
+        .showcase_img {
+          margin: auto;
+        }
+
+        grid-template-areas:
+          "shi shi shi shi shi"
+          "... shp shp shp ..."
+          "... shl shl shl ...";
+      }
+
+      @include screen-large {
+        grid-template-rows: 1.5fr 1fr;
+        grid-column-gap: $nspace4;
+
+        .showcase_paragraph {
+          align-self: end;
+        }
+
+        .showcase_link {
+          margin-bottom: auto;
+        }
+
+        grid-template-areas:
+          "shi shi shi shi shp shp shp"
+          "shi shi shi shi shl shl shl";
       }
     }
   }
