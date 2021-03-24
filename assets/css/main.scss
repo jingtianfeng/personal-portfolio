@@ -4,27 +4,27 @@
 @font-face {
   src: url("/assets/fonts/calibre-regular.woff");
   font-family: "Calibre";
-  font-weight: 400;
+  font-weight: normal;
 }
 
 @font-face {
   src: url("/assets/fonts/calibre-regular-italic.woff");
   font-family: "Calibre";
   font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 @font-face {
   src: url("/assets/fonts/calibre-bold.woff");
   font-family: "Calibre";
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @font-face {
   src: url("/assets/fonts/calibre-bold-italic.woff");
   font-family: "Calibre";
   font-style: italic;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @import "main";
