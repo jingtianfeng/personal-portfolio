@@ -266,12 +266,6 @@ footer {
           height: $icon5;
           width: 100%;
           margin: auto auto 0 auto;
-
-          > g > path,
-          > g > circle {
-            fill: none;
-            stroke: $color-text;
-          }
         }
 
         &_heading,
