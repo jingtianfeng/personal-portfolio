@@ -326,114 +326,95 @@ footer {
     }
   }
 
-  &_skill2 {
-    .container {
-      #skill2_title {
-        grid-area: skt;
-      }
-
-      #skill2_html {
-        &_icon {
-          grid-area: hti;
-        }
-
-        &_heading {
-          grid-area: hth;
-        }
-
-        &_paragraph {
-          grid-area: htp;
-        }
-      }
-
-      #skill2_sass {
-        &_icon {
-          grid-area: sai;
-        }
-
-        &_heading {
-          grid-area: sah;
-        }
-
-        &_paragraph {
-          grid-area: sap;
-        }
-      }
-
-      grid-template-areas:
-        "skt"
-        "hti"
-        "hth"
-        "htp"
-        "sai"
-        "sah"
-        "sap";
-
-      @include screen-small {
-        grid-template-areas:
-          "skt skt skt"
-          "hti hti hti"
-          "hth hth hth"
-          "htp htp htp"
-          "sai sai sai"
-          "sah sah sah"
-          "sap sap sap";
-      }
-    }
-  }
-
+  &_skill2,
   &_skill3 {
     .container {
-      #skill3_title {
+      .skill_title {
         grid-area: skt;
+        align-self: center;
+        font-size: $h4-font-size;
+        font-weight: bold;
       }
 
-      #skill3_js {
+      .skill_1_icon,
+      .skill_2_icon {
+        height: $icon4;
+        width: $icon4;
+      }
+
+      .skill_1_heading,
+      .skill_2_heading {
+        align-self: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .skill_1 {
         &_icon {
-          grid-area: jsi;
+          grid-area: oni;
         }
 
         &_heading {
-          grid-area: jsh;
+          grid-area: onh;
         }
 
         &_paragraph {
-          grid-area: jsp;
+          grid-area: onp;
         }
       }
 
-      #skill3_go {
+      .skill_2 {
         &_icon {
-          grid-area: goi;
+          grid-area: twi;
         }
 
         &_heading {
-          grid-area: goh;
+          grid-area: twh;
         }
 
         &_paragraph {
-          grid-area: gop;
+          grid-area: twp;
         }
       }
 
       grid-template-areas:
         "skt"
-        "jsi"
-        "jsh"
-        "jsp"
-        "goi"
-        "goh"
-        "gop";
+        "..."
+        "oni"
+        "onh"
+        "onp"
+        "..."
+        "twi"
+        "twh"
+        "twp";
 
       @include screen-small {
         grid-template-areas:
           "skt skt skt"
-          "jsi jsi jsi"
-          "jsh jsh jsh"
-          "jsp jsp jsp"
-          "goi goi goi"
-          "goh goh goh"
-          "gop gop gop";
+          "... ... ..."
+          "onh onh oni"
+          "onp onp onp"
+          "... ... ..."
+          "twh twh twi"
+          "twp twp twp";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "skt skt onh onh oni"
+          "... ... onp onp onp"
+          "... ... ... ... ..."
+          "... ... twh twh twi"
+          "... ... twp twp twp";
+      }
+
+      @include screen-large {
+        grid-template-areas:
+          "... skt skt onh onh oni ..."
+          "... ... ... onp onp onp ..."
+          "... ... ... ... ... ... ..."
+          "... ... ... twh twh twi ..."
+          "... ... ... twp twp twp ...";
       }
     }
   }
