@@ -421,16 +421,68 @@ footer {
 
   &_contact2 {
     .container {
+      #contact2_portrait {
+        grid-area: cpo;
+        margin: auto;
+      }
+
+      #contact2_heading {
+        grid-area: che;
+      }
+
+      #contact2_paragraph {
+        grid-area: cpa;
+      }
+
+      grid-template-areas:
+        "cpo"
+        "..."
+        "che"
+        "..."
+        "cpa";
+
+      @include screen-small {
+        grid-template-areas:
+          "cpo cpo cpo"
+          "... ... ..."
+          "che che che"
+          "... ... ..."
+          "cpa cpa cpa";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... cpo cpo cpo ..."
+          "... ... ... ... ..."
+          "che che che che che"
+          "... ... ... ... ..."
+          "cpa cpa cpa cpa cpa";
+      }
+
+      @include screen-large {
+        #contact2_portrait {
+          margin-top: 0;
+        }
+
+        grid-template-areas:
+          "che che che che ... cpo cpo"
+          "cpa cpa cpa cpa ... cpo cpo";
+      }
+    }
+  }
+
+  &_contact3 {
+    .container {
       grid-template-rows: 1fr repeat(5, min-content) 1fr;
 
-      #contact2_email_text,
-      #contact2_github_text {
+      #contact3_email_text,
+      #contact3_github_text {
         align-self: end;
         margin-left: calc(#{$nspace3} + #{$icon2} + #{$nspace3});
       }
 
-      #contact2_email_link,
-      #contact2_github_link {
+      #contact3_email_link,
+      #contact3_github_link {
         align-self: start;
         display: grid;
         grid-template-columns: $icon2 1fr;
@@ -445,7 +497,7 @@ footer {
         }
       }
 
-      #contact2_email {
+      #contact3_email {
         &_text {
           grid-area: emt;
         }
@@ -455,7 +507,7 @@ footer {
         }
       }
 
-      #contact2_github {
+      #contact3_github {
         &_text {
           grid-area: git;
         }
