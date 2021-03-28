@@ -187,8 +187,6 @@ footer {
 
   &_showcase2 {
     .container {
-      grid-template-rows: 1fr min-content min-content;
-
       .showcase_img {
         grid-area: shi;
         align-self: end;
@@ -198,29 +196,80 @@ footer {
         grid-area: shp;
       }
 
+      .showcase_data {
+        grid-area: shd;
+        align-self: end;
+        display: grid;
+
+        &_1_number,
+        &_2_number,
+        &_3_number {
+          align-self: end;
+        }
+
+        &_1 {
+          &_number {
+            grid-area: d1n;
+          }
+
+          &_sub {
+            grid-area: d1s;
+          }
+        }
+
+        &_2 {
+          &_number {
+            grid-area: d2n;
+          }
+
+          &_sub {
+            grid-area: d2s;
+          }
+        }
+
+        &_3 {
+          &_number {
+            grid-area: d3n;
+          }
+
+          &_sub {
+            grid-area: d3s;
+          }
+        }
+
+        grid-template-areas:
+          "d1n d2n d3n"
+          "d1s d2s d3s";
+
+      }
+
       .showcase_link {
         grid-area: shl;
         max-width: max-content;
-        border: 1px solid $color-text-deco;
-        border-radius: $border-radius;
+        border: 1px solid $color-link;
+        border-radius: $border-radius-round;
         padding: $nspace2 $nspace3 $nspace2 $nspace3+2px;
         font-size: $h5-font-size;
         letter-spacing: 2px;
 
         &:hover {
-          border-color: $color-text;
+          border-color: $color-link-hover;
         }
       }
 
       grid-template-areas:
         "shi"
         "shp"
+        "shd"
+        "..."
         "shl";
 
       @include screen-small {
         grid-template-areas:
           "shi shi shi"
           "shp shp shp"
+          "shd shd shd"
+          "... ... ..."
           "shl shl shl";
       }
 
@@ -232,23 +281,33 @@ footer {
         grid-template-areas:
           "shi shi shi shi shi"
           "... shp shp shp ..."
+          "... shd shd shd ..."
+          "... ... ... ... ..."
           "... shl shl shl ...";
       }
 
       @include screen-large {
-        grid-template-rows: 1.5fr 1fr;
+        grid-template-rows: 1fr min-content min-content 1fr;
         grid-column-gap: $nspace4;
 
         .showcase_paragraph {
           align-self: end;
+          margin-left: $nspace4;
+        }
+
+        .showcase_data {
+          margin: 0 $nspace4;
         }
 
         .showcase_link {
+          margin-left: $nspace4;
           margin-bottom: auto;
         }
 
         grid-template-areas:
           "shi shi shi shi shp shp shp"
+          "shi shi shi shi shd shd shd"
+          "shi shi shi shi ... ... ..."
           "shi shi shi shi shl shl shl";
       }
     }
