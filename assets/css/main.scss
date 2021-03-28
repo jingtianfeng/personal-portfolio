@@ -513,6 +513,11 @@ footer {
 
       #contact2_github {
         grid-area: cgi;
+
+        > svg > g > path {
+          fill: $color-text;
+          stroke: none;
+        }
       }
 
       grid-template-areas:
