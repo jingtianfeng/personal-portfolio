@@ -369,18 +369,27 @@ footer {
 
         .about_icon {
           align-self: center;
-          margin: auto 0 auto auto;
+          margin: 0 auto;
         }
 
         .about_heading,
         .about_paragraph {
           text-align: left;
-          max-width: 40ch;
         }
 
         grid-template-areas:
-          "aic aic aic ahe ahe ahe ahe"
-          "aic aic aic apa apa apa apa";
+          "aic aic aic ahe ahe ahe ..."
+          "aic aic aic apa apa apa ...";
+      }
+    }
+  }
+
+  &_about3 {
+    .container {
+      @include screen-large {
+        grid-template-areas:
+          "... ahe ahe ahe aic aic aic"
+          "... apa apa apa aic aic aic";
       }
     }
   }
