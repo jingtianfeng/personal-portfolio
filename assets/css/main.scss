@@ -314,13 +314,8 @@ footer {
         &_icon {
           grid-area: aic;
           height: $icon5;
-          width: 100%;
+          width: $icon5;
           margin: auto auto 0 auto;
-        }
-
-        &_heading,
-        &_paragraph {
-          text-align: center;
         }
 
         &_heading {
@@ -347,11 +342,15 @@ footer {
       }
 
       @include screen-medium {
+        .about_icon {
+          margin: auto auto 0 0;
+        }
+
         grid-template-areas:
           "... aic aic aic ..."
           "... ... ... ... ..."
-          "... ahe ahe ahe ..."
-          "... apa apa apa ...";
+          "... ahe ahe ahe ahe"
+          "... apa apa apa apa";
       }
 
       @include screen-large {
