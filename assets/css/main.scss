@@ -129,32 +129,19 @@ footer {
     .container {
       grid-template-rows: 1fr min-content 1fr;
 
-      .section_title,
-      .section_sub,
-      .section_deco {
-        text-align: center;
-      }
-
       .section_title {
         grid-area: st2;
-        border-top: 1px solid $color-text-deco;
-        border-bottom: 1px solid $color-text-deco;
-        padding: $nspace3 0;
       }
 
       .section_sub {
         grid-area: ss1;
-        letter-spacing: 2px;
+        text-align: right;
       }
 
       .section_deco {
         grid-area: sde;
-        margin: 0 auto;
-        border: 1px solid $color-text-deco;
-        border-radius: $border-radius;
-        padding: $nspace1 $nspace1 $nspace1 $nspace1+8px;
         align-self: end;
-        letter-spacing: 8px;
+        font-size: $h2-font-size;
       }
 
       grid-template-areas:
@@ -170,17 +157,21 @@ footer {
       }
 
       @include screen-medium {
+        grid-template-rows: min-content 1fr;
+
+        .section_deco {
+          align-self: start;
+        }
+
         grid-template-areas:
-          "... sde sde sde ..."
-          "... st2 st2 st2 ..."
-          "... ss1 ss1 ss1 ...";
+          "sde st2 st2 st2 st2"
+          "... ss1 ss1 ss1 ss1";
       }
 
       @include screen-large {
         grid-template-areas:
-          "... ... sde sde sde ... ..."
-          "... st2 st2 st2 st2 st2 ..."
-          "... ss1 ss1 ss1 ss1 ss1 ...";
+          "... ... sde st2 st2 st2 st2"
+          "... ... sde ss1 ss1 ss1 ss1";
       }
     }
   }
