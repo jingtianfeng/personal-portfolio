@@ -157,21 +157,85 @@ footer {
       }
 
       @include screen-medium {
-        grid-template-rows: min-content 1fr;
+        grid-template-rows: 1fr min-content min-content;
+
+        .section_title {
+          align-self: end;
+        }
+
+        grid-template-areas:
+          "sde st2 st2 st2 st2"
+          "... ... ... ... ..."
+          "... ss1 ss1 ss1 ss1";
+      }
+    }
+  }
+
+  &_showcase1 {
+    .container {
+      @include screen-large {
+        .section_deco {
+          align-self: start;
+        }
+
+        grid-template-areas:
+          "... ... sde st2 st2 st2 st2"
+          "... ... ... ... ... ... ..."
+          "... ... ... ss1 ss1 ss1 ss1";
+      }
+    }
+  }
+
+  &_about1 {
+    .container {
+      @include screen-large {
+        .section_sub {
+          text-align: left;
+        }
+
+        .section_deco {
+          align-self: end;
+        }
+
+        grid-template-areas:
+          "... ... ... ... ... ... sde"
+          "... st2 st2 st2 st2 st2 st2"
+          "... ss1 ss1 ss1 ss1 ss1 ...";
+      }
+    }
+  }
+
+  &_skill1 {
+    .container {
+      @include screen-large {
+        .section_deco {
+          align-self: end;
+          text-align: right;
+        }
+
+        grid-template-areas:
+          "... ... ... ... ... ... ..."
+          "st2 st2 st2 st2 st2 st2 sde"
+          "... ... ... ss1 ss1 ss1 ss1";
+      }
+    }
+  }
+
+  &_contact1 {
+    .container {
+      @include screen-large {
+        .section_sub {
+          text-align: left;
+        }
 
         .section_deco {
           align-self: start;
         }
 
         grid-template-areas:
-          "sde st2 st2 st2 st2"
-          "... ss1 ss1 ss1 ss1";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "... ... sde st2 st2 st2 st2"
-          "... ... sde ss1 ss1 ss1 ss1";
+          "... ... ... ... ... ... ..."
+          "... sde st2 st2 st2 st2 st2"
+          "... ... ss1 ss1 ss1 ss1 ss1";
       }
     }
   }
