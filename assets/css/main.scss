@@ -122,7 +122,7 @@ footer {
   &_contact1,
   &_skill1 {
     .container {
-      grid-template-rows: 1fr min-content 1fr;
+      grid-template-rows: 1fr repeat(3, min-content);
 
       .section_title {
         grid-area: st2;
@@ -133,109 +133,38 @@ footer {
         text-align: right;
       }
 
-      .section_deco {
-        grid-area: sde;
-        height: $icon4;
-        width: $icon4;
-
-        > g > path {
-          fill: $color-depth;
-          stroke: none;
-        }
-      }
-
       grid-template-areas:
-        "sde"
+        "..."
         "st2"
+        "..."
         "ss1";
 
       @include screen-small {
         grid-template-areas:
-          "sde sde sde"
+          "... ... ..."
           "st2 st2 st2"
+          "... ... ..."
           "ss1 ss1 ss1";
       }
 
       @include screen-medium {
-        grid-template-rows: 1fr min-content min-content;
-
         .section_title {
           align-self: end;
         }
 
         grid-template-areas:
-          "sde st2 st2 st2 st2"
           "... ... ... ... ..."
-          "... ss1 ss1 ss1 ss1";
+          "... st2 st2 st2 ..."
+          "... ... ... ... ..."
+          "... ss1 ss1 ss1 ...";
       }
-    }
-  }
 
-  &_showcase1 {
-    .container {
       @include screen-large {
-        .section_deco {
-          align-self: start;
-        }
-
-        grid-template-areas:
-          "... ... sde st2 st2 st2 st2"
-          "... ... ... ... ... ... ..."
-          "... ... ... ss1 ss1 ss1 ss1";
-      }
-    }
-  }
-
-  &_about1 {
-    .container {
-      @include screen-large {
-        .section_sub {
-          text-align: left;
-        }
-
-        .section_deco {
-          align-self: end;
-        }
-
-        grid-template-areas:
-          "... ... ... ... ... ... sde"
-          "... st2 st2 st2 st2 st2 st2"
-          "... ss1 ss1 ss1 ss1 ss1 ...";
-      }
-    }
-  }
-
-  &_skill1 {
-    .container {
-      @include screen-large {
-        .section_deco {
-          align-self: end;
-          text-align: right;
-        }
-
         grid-template-areas:
           "... ... ... ... ... ... ..."
-          "st2 st2 st2 st2 st2 st2 sde"
-          "... ... ... ss1 ss1 ss1 ss1";
-      }
-    }
-  }
-
-  &_contact1 {
-    .container {
-      @include screen-large {
-        .section_sub {
-          text-align: left;
-        }
-
-        .section_deco {
-          align-self: start;
-        }
-
-        grid-template-areas:
+          "... st2 st2 st2 st2 st2 ..."
           "... ... ... ... ... ... ..."
-          "... sde st2 st2 st2 st2 st2"
-          "... ... ss1 ss1 ss1 ss1 ss1";
+          "... ... ... ss1 ss1 ss1 ...";
       }
     }
   }
