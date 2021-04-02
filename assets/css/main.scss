@@ -335,15 +335,11 @@ footer {
       }
 
       @include screen-medium {
-        .about_icon {
-          margin: auto auto 0 0;
-        }
-
         grid-template-areas:
           "... aic aic aic ..."
           "... ... ... ... ..."
-          "... ahe ahe ahe ahe"
-          "... apa apa apa apa";
+          "... ahe ahe ahe ..."
+          "... apa apa apa ...";
       }
 
       @include screen-large {
@@ -473,7 +469,6 @@ footer {
     .container {
       #contact2_portrait {
         grid-area: cpo;
-        margin: auto;
       }
 
       #contact2_heading {
@@ -552,10 +547,6 @@ footer {
 
       @include screen-large {
         grid-template-rows: repeat(5, min-content) 1fr;
-
-        #contact2_portrait {
-          margin-top: 0;
-        }
 
         grid-template-areas:
           "che che che che ... cpo cpo"
