@@ -229,16 +229,6 @@ footer {
 
       .showcase_link {
         grid-area: shl;
-        max-width: max-content;
-        border: 1px solid $color-link;
-        border-radius: $border-radius-round;
-        padding: $nspace2 $nspace3 $nspace2 $nspace3+2px;
-        font-size: $h5-font-size;
-        letter-spacing: 2px;
-
-        &:hover {
-          border-color: $color-link-hover;
-        }
       }
 
       grid-template-areas:
