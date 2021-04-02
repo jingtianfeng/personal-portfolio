@@ -135,8 +135,13 @@ footer {
 
       .section_deco {
         grid-area: sde;
-        align-self: end;
-        font-size: $h2-font-size;
+        height: $icon4;
+        width: $icon4;
+
+        > g > path {
+          fill: $color-depth;
+          stroke: none;
+        }
       }
 
       grid-template-areas:
