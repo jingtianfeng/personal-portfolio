@@ -364,93 +364,33 @@ footer {
   }
 
   &_skill_html,
-  &_skill_sass {
+  &_skill_sass,
+  &_skill_js {
     .container {
-      .skill_title {
-        grid-area: skt;
-        align-self: center;
-        font-size: $h4-font-size;
-        font-weight: bold;
-      }
-
-      .skill_1_icon,
-      .skill_2_icon {
+      .skill_icon {
+        grid-area: sic;
         height: $icon4;
         width: $icon4;
       }
 
-      .skill_1_heading,
-      .skill_2_heading {
-        align-self: center;
-        font-size: 1rem;
+      .skill_img {
+        grid-area: sim;
       }
 
-      .skill_1 {
-        &_icon {
-          grid-area: oni;
-        }
-
-        &_heading {
-          grid-area: onh;
-        }
-
-        &_paragraph {
-          grid-area: onp;
-        }
-      }
-
-      .skill_2 {
-        &_icon {
-          grid-area: twi;
-        }
-
-        &_heading {
-          grid-area: twh;
-        }
-
-        &_paragraph {
-          grid-area: twp;
-        }
+      .skill_paragraph {
+        grid-area: spa;
       }
 
       grid-template-areas:
-        "skt"
-        "..."
-        "oni"
-        "onh"
-        "onp"
-        "..."
-        "twi"
-        "twh"
-        "twp";
+        "sic"
+        "sim"
+        "spa";
 
       @include screen-small {
         grid-template-areas:
-          "skt skt skt"
-          "... ... ..."
-          "onh onh oni"
-          "onp onp onp"
-          "... ... ..."
-          "twh twh twi"
-          "twp twp twp";
-      }
-
-      @include screen-medium {
-        grid-template-areas:
-          "skt skt onh onh oni"
-          "... ... onp onp onp"
-          "... ... ... ... ..."
-          "... ... twh twh twi"
-          "... ... twp twp twp";
-      }
-
-      @include screen-large {
-        grid-template-areas:
-          "... skt skt onh onh oni ..."
-          "... ... ... onp onp onp ..."
-          "... ... ... ... ... ... ..."
-          "... ... ... twh twh twi ..."
-          "... ... ... twp twp twp ...";
+          "sic ... ..."
+          "sim sim sim"
+          "spa spa spa"
       }
     }
   }
