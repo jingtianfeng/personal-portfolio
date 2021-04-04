@@ -117,10 +117,10 @@ footer {
     }
   }
 
-  &_showcase1,
-  &_about1,
-  &_contact1,
-  &_skill1 {
+  &_showcase,
+  &_about,
+  &_contact,
+  &_skill {
     .container {
       grid-template-rows: 1fr repeat(3, min-content);
 
