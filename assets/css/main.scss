@@ -169,7 +169,7 @@ footer {
     }
   }
 
-  &_showcase2 {
+  &_showcase_quadra-can {
     .container {
       .showcase_img {
         grid-area: shi;
@@ -287,9 +287,9 @@ footer {
     }
   }
 
-  &_about2,
-  &_about3,
-  &_about4 {
+  &_about_responsive-design,
+  &_about_custom-features,
+  &_about_cheap-hosting {
     .container {
       grid-template-rows: 1fr min-content min-content 1fr;
 
@@ -353,7 +353,7 @@ footer {
     }
   }
 
-  &_about3 {
+  &_about_custom-features {
     .container {
       @include screen-large {
         grid-template-areas:
@@ -363,8 +363,8 @@ footer {
     }
   }
 
-  &_skill2,
-  &_skill3 {
+  &_skill_html,
+  &_skill_sass {
     .container {
       .skill_title {
         grid-area: skt;
@@ -455,22 +455,22 @@ footer {
     }
   }
 
-  &_contact2 {
+  &_contact_cta {
     .container {
-      #contact2_portrait {
+      #cta_portrait {
         grid-area: cpo;
       }
 
-      #contact2_heading {
+      #cta_heading {
         grid-area: che;
       }
 
-      #contact2_paragraph {
+      #cta_paragraph {
         grid-area: cpa;
       }
 
-      #contact2_email,
-      #contact2_github {
+      #cta_email,
+      #cta_github {
         align-self: start;
         display: grid;
         grid-template-columns: $icon2 1fr;
@@ -484,11 +484,11 @@ footer {
         }
       }
 
-      #contact2_email {
+      #cta_email {
         grid-area: cem;
       }
 
-      #contact2_github {
+      #cta_github {
         grid-area: cgi;
 
         > svg > g > path {
