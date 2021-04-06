@@ -294,8 +294,8 @@ footer {
       grid-template-rows: 1fr min-content min-content 1fr;
 
       .value {
-        &_icon {
-          grid-area: vic;
+        &_illustration {
+          grid-area: vil;
           height: $icon6;
           width: $icon6;
           margin: auto auto 0 auto;
@@ -312,13 +312,13 @@ footer {
       }
 
       grid-template-areas:
-          "vic"
+          "vil"
           "vhe"
           "vpa";
 
       @include screen-small {
         grid-template-areas:
-            "vic vic vic"
+            "vil vil vil"
             "... ... ..."
             "vhe vhe vhe"
             "vpa vpa vpa";
@@ -326,7 +326,7 @@ footer {
 
       @include screen-medium {
         grid-template-areas:
-          "... vic vic vic ..."
+          "... vil vil vil ..."
           "... ... ... ... ..."
           "... vhe vhe vhe ..."
           "... vpa vpa vpa ...";
@@ -336,7 +336,7 @@ footer {
         grid-template-rows: 1fr 1.5fr;
         grid-column-gap: $nspace4;
 
-        .value_icon {
+        .value_illustration {
           align-self: center;
           margin: 0 auto;
         }
@@ -347,8 +347,8 @@ footer {
         }
 
         grid-template-areas:
-          "vic vic vic vhe vhe vhe ..."
-          "vic vic vic vpa vpa vpa ...";
+          "vil vil vil vhe vhe vhe ..."
+          "vil vil vil vpa vpa vpa ...";
       }
     }
   }
@@ -357,8 +357,8 @@ footer {
     .container {
       @include screen-large {
         grid-template-areas:
-          "... vhe vhe vhe vic vic vic"
-          "... vpa vpa vpa vic vic vic";
+          "... vhe vhe vhe vil vil vil"
+          "... vpa vpa vpa vil vil vil";
       }
     }
   }
