@@ -445,29 +445,39 @@ footer {
 
   &_contact_cta {
     .container {
-      #cta_links {
-        grid-area: cco;
+      #cta_form {
+        grid-area: cfo;
+      }
 
-        a {
-          display: flex;
-          align-items: center;
+      #cta_paragraph {
+        grid-area: cpa;
+      }
 
-          > svg {
-            margin-right: $nspace3;
-          }
+      #cta_email {
+        grid-area: cem;
+        display: flex;
+        align-items: center;
 
-          &:not(:first-child) {
-            margin-top: $nspace2;
+        > svg {
+          margin-right: $nspace3;
+
+          > g > path {
+            fill: none;
+            stroke: $color-link;
           }
         }
       }
 
       grid-template-areas:
-        "cco";
+        "cfo"
+        "cpa"
+        "cem";
 
       @include screen-small {
         grid-template-areas:
-          "cco cco cco";
+          "cfo cfo cfo"
+          "cpa cpa cpa"
+          "cem cem cem";
       }
     }
   }
