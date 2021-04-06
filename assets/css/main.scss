@@ -443,6 +443,22 @@ footer {
     }
   }
 
+  &_contact_status {
+    .container {
+      #status_heading {
+        grid-area: she;
+      }
+
+      grid-template-areas:
+        "she";
+
+      @include screen-small {
+        grid-template-areas:
+          "she she she";
+      }
+    }
+  }
+
   &_contact_cta {
     .container {
       #cta_form {
