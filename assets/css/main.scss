@@ -401,90 +401,98 @@ footer {
         grid-area: cpo;
       }
 
-      #cta_heading {
-        grid-area: che;
+      #cta_story,
+      #cta_service {
+        p {
+          margin-top: $nspace4;
+        }
       }
 
-      #cta_paragraph {
-        grid-area: cpa;
+      #cta_story {
+        grid-area: cst;
       }
 
-      #cta_email,
-      #cta_github {
-        align-self: start;
+      #cta_service {
+        grid-area: cse;
+      }
+
+      #cta_contact {
+        grid-area: cco;
         display: grid;
-        grid-template-columns: $icon2 1fr;
-        grid-column-gap: $nspace3;
-        align-items: center;
-        max-width: max-content;
-        text-decoration: underline;
+        grid-row-gap: $nspace3;
+        grid-template-rows: min-content min-content 1fr;
 
-        &:hover {
-          border-color: $color-text;
+        &_email,
+        &_github {
+          align-self: start;
+          display: grid;
+          grid-template-columns: $icon2 1fr;
+          grid-column-gap: $nspace3;
+          align-items: center;
+          max-width: max-content;
+          text-decoration: underline;
+
+          &:hover {
+            border-color: $color-text;
+          }
         }
-      }
 
-      #cta_email {
-        grid-area: cem;
-      }
-
-      #cta_github {
-        grid-area: cgi;
-
-        > svg > g > path {
-          fill: $color-text;
-          stroke: none;
+        &_email {
+          grid-area: cem;
         }
+
+        &_github {
+          grid-area: cgi;
+
+          > svg > g > path {
+            fill: $color-text;
+            stroke: none;
+          }
+        }
+
+        grid-template-areas:
+          "cem"
+          "cgi"
+          "...";
       }
 
       grid-template-areas:
         "cpo"
         "..."
-        "che"
+        "cst"
         "..."
-        "cpa"
+        "cse"
         "..."
-        "cem"
-        "cgi";
+        "cco";
 
       @include screen-small {
         grid-template-areas:
           "cpo cpo cpo"
           "... ... ..."
-          "che che che"
+          "cst cst cst"
           "... ... ..."
-          "cpa cpa cpa"
+          "cse cse cse"
           "... ... ..."
-          "... ... ..."
-          "... ... ..."
-          "cem cem cem"
-          "cgi cgi cgi";
+          "cco cco cco";
       }
 
       @include screen-medium {
         grid-template-areas:
           "... cpo cpo cpo ..."
           "... ... ... ... ..."
-          "... che che che ..."
+          "... cst cst cst ..."
           "... ... ... ... ..."
-          "... cpa cpa cpa ..."
+          "... cse cse cse ..."
           "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... cem cem cem ..."
-          "... cgi cgi cgi ...";
+          "... cco cco cco ...";
       }
 
       @include screen-large {
-        grid-template-rows: repeat(5, min-content) 1fr;
-
         grid-template-areas:
-          "che che che che ... cpo cpo"
-          "cpa cpa cpa cpa ... cpo cpo"
-          "cpa cpa cpa cpa ... ... ..."
-          "cpa cpa cpa cpa ... cem cem"
-          "cpa cpa cpa cpa ... cgi cgi"
-          "cpa cpa cpa cpa ... ... ...";
+          "cst cst cst cst ... cpo cpo"
+          "cst cst cst cst ... ... ..."
+          "... ... ... ... ... ... ..."
+          "cse cse cse cse ... cco cco";
       }
     }
   }
