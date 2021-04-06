@@ -395,104 +395,98 @@ footer {
     }
   }
 
-  &_contact_cta {
+  &_contact_faq {
     .container {
-      #cta_portrait {
-        grid-area: cpo;
+      #faq_portrait {
+        grid-area: fpo;
       }
 
-      #cta_story,
-      #cta_service {
+      #faq_story,
+      #faq_service {
         p {
-          margin-top: $nspace4;
+          margin-top: $nspace3;
         }
       }
 
-      #cta_story {
-        grid-area: cst;
+      #faq_story {
+        grid-area: fst;
       }
 
-      #cta_service {
-        grid-area: cse;
+      #faq_service {
+        grid-area: fse;
       }
 
-      #cta_contact {
-        grid-area: cco;
-        display: grid;
-        grid-row-gap: $nspace3;
-        grid-template-rows: min-content min-content 1fr;
-
-        &_email,
-        &_github {
-          align-self: start;
-          display: grid;
-          grid-template-columns: $icon2 1fr;
-          grid-column-gap: $nspace3;
-          align-items: center;
-          max-width: max-content;
-          text-decoration: underline;
-
-          &:hover {
-            border-color: $color-text;
-          }
-        }
-
-        &_email {
-          grid-area: cem;
-        }
-
-        &_github {
-          grid-area: cgi;
-
-          > svg > g > path {
-            fill: $color-text;
-            stroke: none;
-          }
-        }
-
-        grid-template-areas:
-          "cem"
-          "cgi"
-          "...";
+      #faq_data {
+        grid-area: fda;
       }
 
       grid-template-areas:
-        "cpo"
+        "fpo"
         "..."
-        "cst"
+        "fst"
         "..."
-        "cse"
+        "fse"
         "..."
-        "cco";
+        "fda";
 
       @include screen-small {
         grid-template-areas:
-          "cpo cpo cpo"
+          "fpo fpo fpo"
           "... ... ..."
-          "cst cst cst"
+          "fst fst fst"
           "... ... ..."
-          "cse cse cse"
+          "fse fse fse"
           "... ... ..."
-          "cco cco cco";
+          "fda fda fda";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "... cpo cpo cpo ..."
+          "... fpo fpo fpo ..."
           "... ... ... ... ..."
-          "... cst cst cst ..."
+          "... fst fst fst ..."
           "... ... ... ... ..."
-          "... cse cse cse ..."
+          "... fse fse fse ..."
           "... ... ... ... ..."
-          "... cco cco cco ...";
+          "... fda fda fda ...";
       }
 
       @include screen-large {
+        grid-column-gap: $nspace4;
+
         grid-template-areas:
-          "cst cst cst cst ... cpo cpo"
-          "cst cst cst cst ... ... ..."
-          "... ... ... ... ... ... ..."
-          "cse cse cse cse ... cco cco";
+          "fpo fpo fpo fst fst fst fst"
+          "... ... ... fst fst fst fst"
+          "fse fse fse fda fda fda fda";
+      }
+    }
+  }
+
+  &_contact_cta {
+    .container {
+      #cta_links {
+        grid-area: cco;
+
+        a {
+          display: flex;
+          align-items: center;
+
+          > svg {
+            margin-right: $nspace3;
+          }
+
+          &:not(:first-child) {
+            margin-top: $nspace2;
+          }
+        }
+      }
+
+      grid-template-areas:
+        "cco";
+
+      @include screen-small {
+        grid-template-areas:
+          "cco cco cco";
       }
     }
   }
