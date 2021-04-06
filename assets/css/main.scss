@@ -118,7 +118,7 @@ footer {
   }
 
   &_showcase,
-  &_about,
+  &_value,
   &_contact,
   &_skill {
     .container {
@@ -287,78 +287,78 @@ footer {
     }
   }
 
-  &_about_responsive-design,
-  &_about_custom-features,
-  &_about_cheap-hosting {
+  &_value_responsive-design,
+  &_value_custom-features,
+  &_value_cheap-hosting {
     .container {
       grid-template-rows: 1fr min-content min-content 1fr;
 
-      .about {
+      .value {
         &_icon {
-          grid-area: aic;
+          grid-area: vic;
           height: $icon6;
           width: $icon6;
           margin: auto auto 0 auto;
         }
 
         &_heading {
-          grid-area: ahe;
+          grid-area: vhe;
           align-self: end;
         }
 
         &_paragraph {
-          grid-area: apa;
+          grid-area: vpa;
         }
       }
 
       grid-template-areas:
-          "aic"
-          "ahe"
-          "apa";
+          "vic"
+          "vhe"
+          "vpa";
 
       @include screen-small {
         grid-template-areas:
-            "aic aic aic"
+            "vic vic vic"
             "... ... ..."
-            "ahe ahe ahe"
-            "apa apa apa";
+            "vhe vhe vhe"
+            "vpa vpa vpa";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "... aic aic aic ..."
+          "... vic vic vic ..."
           "... ... ... ... ..."
-          "... ahe ahe ahe ..."
-          "... apa apa apa ...";
+          "... vhe vhe vhe ..."
+          "... vpa vpa vpa ...";
       }
 
       @include screen-large {
         grid-template-rows: 1fr 1.5fr;
         grid-column-gap: $nspace4;
 
-        .about_icon {
+        .value_icon {
           align-self: center;
           margin: 0 auto;
         }
 
-        .about_heading,
-        .about_paragraph {
+        .value_heading,
+        .value_paragraph {
           text-align: left;
         }
 
         grid-template-areas:
-          "aic aic aic ahe ahe ahe ..."
-          "aic aic aic apa apa apa ...";
+          "vic vic vic vhe vhe vhe ..."
+          "vic vic vic vpa vpa vpa ...";
       }
     }
   }
 
-  &_about_custom-features {
+  &_value_custom-features {
     .container {
       @include screen-large {
         grid-template-areas:
-          "... ahe ahe ahe aic aic aic"
-          "... apa apa apa aic aic aic";
+          "... vhe vhe vhe vic vic vic"
+          "... vpa vpa vpa vic vic vic";
       }
     }
   }
