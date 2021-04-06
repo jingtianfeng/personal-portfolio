@@ -395,69 +395,74 @@ footer {
     }
   }
 
-  &_contact_faq {
+  &_contact_about {
     .container {
-      #faq_portrait {
-        grid-area: fpo;
+      #about_portrait {
+        grid-area: apo;
       }
 
-      #faq_story,
-      #faq_service {
-        p {
-          margin-top: $nspace3;
-        }
+      #about_heading {
+        grid-area: ahe;
       }
 
-      #faq_story {
-        grid-area: fst;
-      }
-
-      #faq_service {
-        grid-area: fse;
-      }
-
-      #faq_data {
-        grid-area: fda;
+      #about_paragraph {
+        grid-area: apa;
       }
 
       grid-template-areas:
-        "fpo"
+        "apo"
         "..."
-        "fst"
+        "ahe"
         "..."
-        "fse"
-        "..."
-        "fda";
+        "apa";
 
       @include screen-small {
         grid-template-areas:
-          "fpo fpo fpo"
+          "apo apo apo"
           "... ... ..."
-          "fst fst fst"
+          "ahe ahe ahe"
           "... ... ..."
-          "fse fse fse"
-          "... ... ..."
-          "fda fda fda";
+          "apa apa apa";
       }
 
       @include screen-medium {
         grid-template-areas:
-          "... fpo fpo fpo ..."
+          "... apo apo apo ..."
           "... ... ... ... ..."
-          "... fst fst fst ..."
+          "... ahe ahe ahe ..."
           "... ... ... ... ..."
-          "... fse fse fse ..."
-          "... ... ... ... ..."
-          "... fda fda fda ...";
+          "... apa apa apa ...";
       }
 
       @include screen-large {
         grid-column-gap: $nspace4;
-
         grid-template-areas:
-          "fpo fpo fpo fst fst fst fst"
-          "... ... ... fst fst fst fst"
-          "fse fse fse fda fda fda fda";
+          "apo apo apo ahe ahe ahe ahe"
+          "apo apo apo apa apa apa apa";
+      }
+    }
+  }
+
+  &_contact_service {
+    .container {
+      #service_heading {
+        grid-area: she;
+      }
+
+      #service_paragraph {
+        grid-area: spa;
+      }
+
+      grid-template-areas:
+        "she"
+        "..."
+        "spa";
+
+      @include screen-small {
+        grid-template-areas:
+          "she she she"
+          "... ... ..."
+          "spa spa spa";
       }
     }
   }
