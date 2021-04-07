@@ -367,30 +367,62 @@ footer {
   &_skill_sass,
   &_skill_js {
     .container {
-      .skill_icon {
-        grid-area: sic;
-        height: $icon4;
-        width: $icon4;
-      }
-
       .skill_img {
         grid-area: sim;
       }
 
-      .skill_paragraph {
-        grid-area: spa;
+      .skill_content {
+        grid-area: sco;
+        align-self: center;
+        display: grid;
+        grid-template-columns: $icon4 1fr;
+        grid-column-gap: $nspace4;
+        grid-row-gap: $nspace4;
+
+        > svg {
+          grid-area: cic;
+          height: $icon4;
+          width: $icon4;
+        }
+
+        > h4 {
+          grid-area: che;
+          align-self: center;
+        }
+
+        > p {
+          grid-area: cpa;
+        }
+
+        grid-template-areas:
+          "cic che"
+          "cpa cpa";
       }
 
       grid-template-areas:
-        "sic"
         "sim"
-        "spa";
+        "..."
+        "sco";
 
       @include screen-small {
         grid-template-areas:
-          "sic ... ..."
           "sim sim sim"
-          "spa spa spa"
+          "... ... ..."
+          "sco sco sco"
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... sim sim sim ..."
+          "... ... ... ... ..."
+          "... sco sco sco ...";
+      }
+
+      @include screen-large {
+        grid-column-gap: $nspace4;
+
+        grid-template-areas:
+          "sco sco sco sim sim sim sim";
       }
     }
   }
