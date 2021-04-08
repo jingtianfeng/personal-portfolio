@@ -400,15 +400,15 @@ footer {
       }
 
       grid-template-areas:
-        "sim"
+        "sco"
         "..."
-        "sco";
+        "sim";
 
       @include screen-small {
         grid-template-areas:
-          "sim sim sim"
-          "... ... ..."
           "sco sco sco"
+          "... ... ..."
+          "sim sim sim";
       }
 
       @include screen-medium {
