@@ -480,12 +480,67 @@ footer {
         grid-area: fhe;
       }
 
+      #faq_result_1,
+      #faq_result_2 {
+        h3 {
+          font-size: 4.25rem;
+          color: $color-text;
+        }
+
+        h4 {
+          font-size: 1rem;
+          margin-bottom: $nspace4;
+        }
+      }
+
+      #faq_result {
+        &_1 {
+          grid-area: r01;
+        }
+
+        &_2 {
+          grid-area: r02;
+        }
+      }
+
       grid-template-areas:
-        "fhe";
+        "fhe"
+        "..."
+        "r01"
+        "r02";
 
       @include screen-small {
         grid-template-areas:
-          "fhe fhe fhe";
+          "fhe fhe fhe"
+          "... ... ..."
+          "r01 r01 r01"
+          "r02 r02 r02";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... fhe fhe fhe ..."
+          "... ... ... ... ..."
+          "... r01 r01 r01 ..."
+          "... r02 r02 r02 ...";
+      }
+
+      @include screen-large {
+        grid-column-gap: $nspace4;
+
+        #faq_heading {
+          font-size: $h4-font-size;
+        }
+
+        #faq_result_1,
+        #faq_result_2 {
+          p {
+            font-size: $h6-font-size;
+          }
+        }
+
+        grid-template-areas:
+          "fhe fhe ... r01 r01 r02 r02";
       }
     }
   }
