@@ -431,10 +431,12 @@ footer {
     .container {
       #about_portrait {
         grid-area: apo;
+        align-self: center;
       }
 
       #about_heading {
         grid-area: ahe;
+        align-self: end;
       }
 
       #about_paragraph {
@@ -445,7 +447,6 @@ footer {
         "apo"
         "..."
         "ahe"
-        "..."
         "apa";
 
       @include screen-small {
@@ -453,7 +454,6 @@ footer {
           "apo apo apo"
           "... ... ..."
           "ahe ahe ahe"
-          "... ... ..."
           "apa apa apa";
       }
 
@@ -462,15 +462,14 @@ footer {
           "... apo apo apo ..."
           "... ... ... ... ..."
           "... ahe ahe ahe ..."
-          "... ... ... ... ..."
           "... apa apa apa ...";
       }
 
       @include screen-large {
         grid-column-gap: $nspace4;
         grid-template-areas:
-          "apo apo apo ahe ahe ahe ahe"
-          "apo apo apo apa apa apa apa";
+          "... apo apo ahe ahe ahe ..."
+          "... apo apo apa apa apa ...";
       }
     }
   }
