@@ -668,35 +668,54 @@ title: Web Developer
 </section>
 <section id="home_contact_cta">
     <div class="container">
-        <div id="cta_form">
-            form, copy jonathan morin
+        <h4 id="cta_heading">
+            Thanks for visiting folks!
+        </h4>
+        <form id="cta_form" method="post" action="/index.html">
+            <label for="form_name">Hi Feng, my name is</label>
+            <input id="form_name" type="text" name="name"
+                   placeholder="ex: John Doe">
+            <label for="form_type">I could use your services for a</label>
+            <select id="form_type" name="type">
+                <option value="landing">landing page</option>
+                <option value="portfolio">portfolio website</option>
+                <option value="business">business website</option>
+            </select>
+            <label for="form_email">You can reach me at</label>
+            <input id="form_email" type="email" name="email"
+                   placeholder="ex: john@example.com">
+            <input type="hidden" name="_to" value="jingtianfeng@gmail.com">
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <input type="text" name="_gotcha" style="display: none">
+            <button type="submit">send message</button>
+        </form>
+        <div id="cta_email">
+            <p>
+                For custom websites or other inquiries:
+            </p>
+            <a href="mailto:jingtianfeng@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 300 300" width="300" height="300">
+                    <g transform="matrix(12.5,0,0,12.5,0,0)">
+                        <path d="M5.250 0.750 L18.750 0.750 L18.750 11.250 L5.250 11.250 Z" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M5.25 2.25L12 6 18.75 2.25" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M18.75,3,23.25.75c0,8.25-4.5,7.5-4.5,7.5" fill="none" stroke="#000000"
+                              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M5.25,3,.75.75c0,8.25,4.5,7.5,4.5,7.5" fill="none" stroke="#000000"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M12 15.75L12 23.25" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M15.75 14.25L15.75 18.75" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="1.5"></path>
+                        <path d="M8.25 14.25L8.25 18.75" fill="none" stroke="#000000" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="1.5"></path>
+                    </g>
+                </svg>
+                jingtianfeng@gmail.com
+            </a>
         </div>
-        <p id="cta_paragraph">
-            paragraph
-        </p>
-        <a id="cta_email"
-           href="mailto:jingtianfeng@gmail.com"
-           target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 300 300" width="300" height="300">
-                <g transform="matrix(12.5,0,0,12.5,0,0)">
-                    <path d="M5.250 0.750 L18.750 0.750 L18.750 11.250 L5.250 11.250 Z" fill="none" stroke="#000000"
-                          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M5.25 2.25L12 6 18.75 2.25" fill="none" stroke="#000000" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M18.75,3,23.25.75c0,8.25-4.5,7.5-4.5,7.5" fill="none" stroke="#000000"
-                          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M5.25,3,.75.75c0,8.25,4.5,7.5,4.5,7.5" fill="none" stroke="#000000" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M12 15.75L12 23.25" fill="none" stroke="#000000" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M15.75 14.25L15.75 18.75" fill="none" stroke="#000000" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="1.5"></path>
-                    <path d="M8.25 14.25L8.25 18.75" fill="none" stroke="#000000" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="1.5"></path>
-                </g>
-            </svg>
-            jingtianfeng@gmail.com
-        </a>
     </div>
 </section>

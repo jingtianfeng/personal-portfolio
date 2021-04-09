@@ -551,39 +551,80 @@ footer {
 
   &_contact_cta {
     .container {
-      #cta_form {
-        grid-area: cfo;
+      #cta_heading {
+        grid-area: che;
       }
 
-      #cta_paragraph {
-        grid-area: cpa;
+      #cta_form {
+        grid-area: cfo;
+
+        label {
+          display: block;
+          margin-bottom: $nspace3;
+
+          &:not(:first-child) {
+            margin-top: $nspace4;
+          }
+        }
+
+        button {
+          margin-top: $nspace4;
+        }
       }
 
       #cta_email {
         grid-area: cem;
-        display: flex;
-        align-items: center;
 
-        > svg {
-          margin-right: $nspace3;
+        p {
+          margin-bottom: $nspace3;
+        }
 
-          > g > path {
-            fill: none;
-            stroke: $color-link;
+        a {
+          display: flex;
+          align-items: center;
+
+          > svg {
+            margin-right: $nspace3;
+
+            > g > path {
+              fill: none;
+              stroke: $color-link;
+            }
           }
         }
       }
 
       grid-template-areas:
+        "che"
+        "..."
         "cfo"
-        "cpa"
+        "..."
         "cem";
 
       @include screen-small {
         grid-template-areas:
+          "che che che"
+          "... ... ..."
           "cfo cfo cfo"
-          "cpa cpa cpa"
+          "... ... ..."
           "cem cem cem";
+      }
+
+      @include screen-medium {
+        grid-template-areas:
+          "... che che che ..."
+          "... ... ... ... ..."
+          "... cfo cfo cfo ..."
+          "... ... ... ... ..."
+          "... cem cem cem ..."
+      }
+
+      @include screen-large {
+        grid-column-gap: $nspace4;
+
+        grid-template-areas:
+          "che che ... cfo cfo cfo ..."
+          "cem cem cem cfo cfo cfo ...";
       }
     }
   }
