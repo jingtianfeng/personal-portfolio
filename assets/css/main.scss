@@ -489,7 +489,7 @@ footer {
 
         h4 {
           font-size: 1rem;
-          margin-bottom: $nspace4;
+          margin-bottom: $nspace3;
         }
       }
 
@@ -507,6 +507,7 @@ footer {
         "fhe"
         "..."
         "r01"
+        "..."
         "r02";
 
       @include screen-small {
@@ -514,6 +515,7 @@ footer {
           "fhe fhe fhe"
           "... ... ..."
           "r01 r01 r01"
+          "... ... ..."
           "r02 r02 r02";
       }
 
@@ -522,6 +524,7 @@ footer {
           "... fhe fhe fhe ..."
           "... ... ... ... ..."
           "... r01 r01 r01 ..."
+          "... ... ... ... ..."
           "... r02 r02 r02 ...";
       }
 
