@@ -623,8 +623,7 @@ footer {
         grid-column-gap: $nspace4;
 
         #cta_form {
-          max-width: 400px;
-          @include is-boxed(1);
+          max-width: 350px;
 
           > label {
             font-size: $h5-font-size;
