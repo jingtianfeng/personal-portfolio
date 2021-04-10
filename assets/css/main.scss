@@ -567,6 +567,12 @@ footer {
           }
         }
 
+        #form_name,
+        #form_email {
+          border: none;
+          border-bottom: 1px solid $color-text-deco;
+        }
+
         button {
           margin-top: $nspace4;
         }
