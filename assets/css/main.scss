@@ -572,21 +572,7 @@ footer {
         grid-area: cem;
 
         p {
-          margin-bottom: $nspace3;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-
-          > svg {
-            margin-right: $nspace3;
-
-            > g > path {
-              fill: none;
-              stroke: $color-link;
-            }
-          }
+          margin-bottom: $nspace2;
         }
       }
 
@@ -630,9 +616,13 @@ footer {
           }
         }
 
+        #cta_email {
+          font-size: $h5-font-size;
+        }
+
         grid-template-areas:
-          "che che ... cfo cfo cfo cfo"
-          "cem cem cem cfo cfo cfo cfo";
+          "che che ... cfo cfo cfo ..."
+          "cem cem ... cfo cfo cfo ...";
       }
     }
   }
