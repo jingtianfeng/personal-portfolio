@@ -494,7 +494,9 @@ footer {
         }
 
         p {
+          font-size: $h6-font-size;
           margin-top: $nspace3;
+          max-width: 28ch;
         }
       }
 
@@ -527,10 +529,7 @@ footer {
       @include screen-medium {
         grid-template-areas:
           "... fhe fhe fhe ..."
-          "... ... ... ... ..."
-          "... r01 r01 r01 ..."
-          "... ... ... ... ..."
-          "... r02 r02 r02 ...";
+          "... r01 r01 r02 r02";
       }
 
       @include screen-large {
@@ -538,13 +537,6 @@ footer {
 
         #faq_heading {
           font-size: $h4-font-size;
-        }
-
-        #faq_result_1,
-        #faq_result_2 {
-          p {
-            font-size: $h6-font-size;
-          }
         }
 
         grid-template-areas:
