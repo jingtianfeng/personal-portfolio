@@ -484,13 +484,17 @@ footer {
       #faq_result_1,
       #faq_result_2 {
         h3 {
-          font-size: 4.25rem;
           color: $color-text;
+          font-size: 2.625rem;
+          font-weight: bold;
         }
 
         h4 {
           font-size: 1rem;
-          margin-bottom: $nspace3;
+        }
+
+        p {
+          margin-top: $nspace3;
         }
       }
 
