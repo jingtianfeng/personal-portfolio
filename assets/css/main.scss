@@ -339,7 +339,7 @@ footer {
 
         .value_illustration {
           align-self: center;
-          margin: 0 auto;
+          margin: 0 0 0 auto;
         }
 
         .value_heading,
@@ -357,6 +357,10 @@ footer {
   &_value_custom-features {
     .container {
       @include screen-large {
+        .value_illustration {
+          margin: 0 auto 0 0;
+        }
+
         grid-template-areas:
           "... vhe vhe vhe vil vil vil"
           "... vpa vpa vpa vil vil vil";
