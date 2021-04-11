@@ -144,7 +144,7 @@ footer {
 
       @include screen-large {
         grid-template-areas:
-          "st2 st2 st2 st2 st2 st2 ...";
+          "... st2 st2 st2 st2 st2 ...";
       }
     }
   }
