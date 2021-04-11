@@ -190,6 +190,17 @@ footer {
         &_2_number,
         &_3_number {
           align-self: end;
+          color: $color-text;
+          font-size: $h4-font-size;
+          font-weight: bold;
+          line-height: $h4-line-height;
+        }
+
+        &_1_sub,
+        &_2_sub,
+        &_3_sub {
+          font-size: $h6-font-size;
+          line-height: $h6-line-height;
         }
 
         &_1 {
@@ -446,6 +457,7 @@ footer {
 
       #about_paragraph {
         grid-area: apa;
+        max-width: 40ch;
       }
 
       grid-template-areas:
@@ -472,9 +484,10 @@ footer {
 
       @include screen-large {
         grid-column-gap: $nspace4;
+
         grid-template-areas:
-          "... apo apo ahe ahe ahe ..."
-          "... apo apo apa apa apa ...";
+          "apo apo apo ahe ahe ahe ..."
+          "apo apo apo apa apa apa apa";
       }
     }
   }
@@ -487,18 +500,22 @@ footer {
 
       #faq_result_1,
       #faq_result_2 {
-        h3 {
+        > .result_data {
           color: $color-text;
           font-size: 2.625rem;
           font-weight: bold;
+          line-height: 1.25;
         }
 
-        h4 {
-          font-size: 1rem;
+        > .result_heading {
+          color: $color-text;
+          font-size: $h5-font-size;
+          line-height: $h5-line-height;
         }
 
-        p {
+        > .result_paragraph {
           font-size: $h6-font-size;
+          line-height: $h6-line-height;
           margin-top: $nspace3;
           max-width: 28ch;
         }
@@ -538,10 +555,6 @@ footer {
 
       @include screen-large {
         grid-column-gap: $nspace4;
-
-        #faq_heading {
-          font-size: $h4-font-size;
-        }
 
         grid-template-areas:
           "fhe fhe ... r01 r01 r02 r02";
