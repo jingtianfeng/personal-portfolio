@@ -282,7 +282,7 @@ footer {
   &_value_custom-features,
   &_value_cheap-hosting {
     .container {
-      grid-template-rows: 1fr min-content min-content 1fr;
+      grid-template-rows: 1fr repeat(3, min-content);
 
       .value {
         &_illustration {
