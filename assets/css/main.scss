@@ -29,12 +29,14 @@
 
 @import "nspace";
 
-footer {
+#footer {
   .container {
     #footer_copyright {
       grid-area: foc;
-      align-self: center;
-      text-align: center;
+      align-self: end;
+      text-align: end;
+      font-size: $h5-font-size;
+      line-height: $h5-line-height;
     }
 
     grid-template-areas:
@@ -42,17 +44,17 @@ footer {
 
     @include screen-small {
       grid-template-areas:
-        "foc foc foc";
+        "... ... foc";
     }
 
     @include screen-medium {
       grid-template-areas:
-        "... foc foc foc ...";
+        "... ... ... ... foc";
     }
 
     @include screen-large {
       grid-template-areas:
-        "... ... foc foc foc ... ...";
+        "... ... ... ... ... ... foc";
     }
   }
 }
