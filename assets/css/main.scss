@@ -124,50 +124,27 @@ footer {
   &_contact,
   &_skill {
     .container {
-      grid-template-rows: 1fr repeat(3, min-content);
-
       .section_title {
         grid-area: st2;
-      }
-
-      .section_sub {
-        grid-area: ss1;
+        align-self: center;
       }
 
       grid-template-areas:
-        "..."
-        "st2"
-        "..."
-        "ss1";
+        "st2";
 
       @include screen-small {
         grid-template-areas:
-          "... ... ..."
-          "st2 st2 st2"
-          "... ... ..."
-          "ss1 ss1 ss1";
+          "st2 st2 st2";
       }
 
       @include screen-medium {
-        .section_title {
-          align-self: end;
-        }
-
         grid-template-areas:
-          "... ... ... ... ..."
-          "... st2 st2 st2 ..."
-          "... ... ... ... ..."
-          "... ss1 ss1 ss1 ...";
+          "... st2 st2 st2 ...";
       }
 
       @include screen-large {
-        grid-column-gap: $nspace4;
-
         grid-template-areas:
-          "... ... ... ... ... ... ..."
-          "... st2 st2 st2 st2 st2 ..."
-          "... ... ... ... ... ... ..."
-          "... ... ... ss1 ss1 ss1 ...";
+          "st2 st2 st2 st2 st2 st2 st2";
       }
     }
   }
