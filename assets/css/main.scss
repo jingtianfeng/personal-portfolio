@@ -77,6 +77,8 @@ footer {
         &_sub {
           grid-area: hsu;
           text-align: center;
+          font-size: $h5-font-size;
+          line-height: $h5-line-height;
         }
       }
 
@@ -96,7 +98,7 @@ footer {
         grid-template-areas:
           "him him him him him"
           "... ht1 ht1 ht1 ht1"
-          "hsu hsu hsu hsu hsu";
+          "... hsu hsu hsu ...";
       }
 
       @include screen-large {
@@ -112,7 +114,7 @@ footer {
 
         grid-template-areas:
           "him him him ht1 ht1 ht1 ht1"
-          "hsu hsu hsu hsu hsu hsu hsu";
+          "... ... hsu hsu hsu ... ...";
       }
     }
   }
@@ -408,6 +410,7 @@ footer {
 
         > p {
           grid-area: cpa;
+          max-width: 28ch;
         }
 
         grid-template-areas:
