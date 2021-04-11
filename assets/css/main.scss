@@ -472,14 +472,14 @@ footer {
     }
   }
 
-  &_contact_faq {
+  &_contact_result {
     .container {
-      #faq_heading {
-        grid-area: fhe;
+      #result_heading {
+        grid-area: rhe;
       }
 
-      #faq_result_1,
-      #faq_result_2 {
+      #result_1,
+      #result_2 {
         > .result_data {
           color: $color-text;
           font-size: 2.625rem;
@@ -501,7 +501,7 @@ footer {
         }
       }
 
-      #faq_result {
+      #result {
         &_1 {
           grid-area: r01;
         }
@@ -512,7 +512,7 @@ footer {
       }
 
       grid-template-areas:
-        "fhe"
+        "rhe"
         "..."
         "r01"
         "..."
@@ -520,7 +520,7 @@ footer {
 
       @include screen-small {
         grid-template-areas:
-          "fhe fhe fhe"
+          "rhe rhe rhe"
           "... ... ..."
           "r01 r01 r01"
           "... ... ..."
@@ -529,7 +529,7 @@ footer {
 
       @include screen-medium {
         grid-template-areas:
-          "... fhe fhe fhe ..."
+          "... rhe rhe rhe ..."
           "... r01 r01 r02 r02";
       }
 
@@ -537,7 +537,7 @@ footer {
         grid-column-gap: $nspace4;
 
         grid-template-areas:
-          "fhe fhe ... r01 r01 r02 r02";
+          "rhe rhe ... r01 r01 r02 r02";
       }
     }
   }
