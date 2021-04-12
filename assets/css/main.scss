@@ -255,7 +255,6 @@
 
       @include screen-large {
         grid-template-rows: 1fr min-content min-content 1fr;
-        grid-column-gap: $nspace4;
 
         .showcase_paragraph {
           align-self: end;
@@ -327,7 +326,6 @@
 
       @include screen-large {
         grid-template-rows: 1fr 1.5fr;
-        grid-column-gap: $nspace4;
 
         .value_illustration {
           align-self: center;
@@ -417,8 +415,6 @@
       }
 
       @include screen-large {
-        grid-column-gap: $nspace4;
-
         grid-template-areas:
           "sco sco sco sim sim sim sim";
       }
@@ -465,8 +461,6 @@
       }
 
       @include screen-large {
-        grid-column-gap: $nspace4;
-
         grid-template-areas:
           "apo apo apo ahe ahe ahe ..."
           "apo apo apo apa apa apa apa";
@@ -536,8 +530,6 @@
       }
 
       @include screen-large {
-        grid-column-gap: $nspace4;
-
         grid-template-areas:
           "rhe rhe ... r01 r01 r02 r02";
       }
@@ -611,8 +603,6 @@
       }
 
       @include screen-large {
-        grid-column-gap: $nspace4;
-
         #cta_form {
           max-width: 350px;
 
