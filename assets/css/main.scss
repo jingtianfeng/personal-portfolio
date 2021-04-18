@@ -470,31 +470,30 @@
 
   &_contact_result {
     .container {
-      #result_heading {
-        grid-area: rhe;
-      }
-
-      #result_1,
-      #result_2 {
-        > .result_data {
+      .result {
+        &__data {
           color: $color-text;
           font-size: 2.625rem;
           font-weight: bold;
           line-height: 1.25;
         }
 
-        > .result_heading {
+        &__heading {
           color: $color-text;
           font-size: $h5-font-size;
           line-height: $h5-line-height;
         }
 
-        > .result_paragraph {
+        &__paragraph {
           font-size: $h6-font-size;
           line-height: $h6-line-height;
           margin-top: $nspace3;
-          max-width: 28ch;
+          max-width: 180px;
         }
+      }
+
+      #result_heading {
+        grid-area: rhe;
       }
 
       #result {
@@ -505,33 +504,61 @@
         &_2 {
           grid-area: r02;
         }
+
+        &_3 {
+          grid-area: r03;
+        }
+
+        &_4 {
+          grid-area: r04;
+        }
+      }
+
+      #result_paragraph {
+        grid-area: rpa;
       }
 
       grid-template-areas:
         "rhe"
         "..."
+        "rpa"
+        "..."
         "r01"
         "..."
-        "r02";
+        "r02"
+        "..."
+        "r03"
+        "..."
+        "r04";
 
       @include screen-small {
         grid-template-areas:
           "rhe rhe rhe"
           "... ... ..."
+          "rpa rpa rpa"
+          "... ... ..."
           "r01 r01 r01"
           "... ... ..."
-          "r02 r02 r02";
+          "r02 r02 r02"
+          "... ... ..."
+          "r03 r03 r03"
+          "... ... ..."
+          "r04 r04 r04";
       }
 
       @include screen-medium {
         grid-template-areas:
           "... rhe rhe rhe ..."
-          "... r01 r01 r02 r02";
+          "... rpa rpa rpa ..."
+          "... r01 r01 r02 r02"
+          "... r03 r03 r04 r04";
       }
 
       @include screen-large {
         grid-template-areas:
-          "rhe rhe ... r01 r01 r02 r02";
+          "rhe rhe ... r01 r01 r02 r02"
+          "... ... ... ... ... ... ..."
+          "rpa rpa ... r03 r03 r04 r04";
       }
     }
   }
