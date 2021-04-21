@@ -313,8 +313,6 @@
   &_value_custom-features,
   &_value_cheap-hosting {
     .container {
-      grid-template-rows: 1fr repeat(3, min-content);
-
       .value {
         &_illustration {
           grid-area: vil;
@@ -369,7 +367,7 @@
         .value_illustration {
           width: 80%;
         }
-        
+
         grid-template-areas:
           "vhe vhe vhe vil vil vil vil"
           "vpa vpa vpa vil vil vil vil";
