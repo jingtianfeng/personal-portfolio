@@ -500,6 +500,8 @@
 
   &_contact_result {
     .container {
+      grid-row-gap: $nspace4;
+
       .result {
         &__data {
           color: $color-text;
@@ -544,45 +546,34 @@
         }
       }
 
-      #result_text {
-        grid-area: rte;
-        font-size: $h6-font-size;
-        line-height: $h6-line-height;
+      #result_illustration {
+        grid-area: ril;
+        height: $icon5;
+        width: $icon5;
       }
 
       grid-template-areas:
         "rhe"
-        "..."
-        "rte"
-        "..."
+        "ril"
         "r01"
-        "..."
         "r02"
-        "..."
         "r03"
-        "..."
         "r04";
 
       @include screen-small {
         grid-template-areas:
+          "ril ril ril"
           "rhe rhe rhe"
-          "... ... ..."
-          "rte rte rte"
-          "... ... ..."
           "r01 r01 r01"
-          "... ... ..."
           "r02 r02 r02"
-          "... ... ..."
           "r03 r03 r03"
-          "... ... ..."
           "r04 r04 r04";
       }
 
       @include screen-medium {
         grid-template-areas:
+          "... ... ril ril ..."
           "... rhe rhe rhe ..."
-          "... rte rte rte ..."
-          "... ... ... ... ..."
           "... r01 r01 r02 r02"
           "... r03 r03 r04 r04";
       }
@@ -590,8 +581,7 @@
       @include screen-large {
         grid-template-areas:
           "rhe rhe ... r01 r01 r02 r02"
-          "... ... ... ... ... ... ..."
-          "rte rte ... r03 r03 r04 r04";
+          "ril ril ... r03 r03 r04 r04";
       }
     }
   }
