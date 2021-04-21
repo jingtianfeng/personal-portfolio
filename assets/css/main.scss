@@ -31,30 +31,71 @@
 
 #footer {
   .container {
-    #footer_copyright {
-      grid-area: foc;
-      align-self: end;
-      text-align: end;
+    #footer_email {
+      grid-area: fem;
+    }
+
+    #footer_paragraph {
+      grid-area: fpa;
+    }
+
+    #footer_paragraph,
+    #footer_social {
+      margin: $nspace3 0;
+    }
+
+    #footer_social {
+      grid-area: fso;
+      display: flex;
+      flex-direction: column;
+      line-height: $p-line-height;
+
+      > a:not(:first-child) {
+        margin-top: $nspace3;
+      }
+    }
+
+    #footer_text {
+      grid-area: fte;
       font-size: $h5-font-size;
       line-height: $h5-line-height;
     }
 
     grid-template-areas:
-      "foc";
+        "fte"
+        "fem"
+        "fpa"
+        "..."
+        "fso";
 
     @include screen-small {
       grid-template-areas:
-        "... ... foc";
+          "fte fte fte"
+          "fem fem fem"
+          "fso fpa fpa";
     }
 
     @include screen-medium {
+      #footer_email {
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
+      }
+
       grid-template-areas:
-        "... ... ... ... foc";
+        "... fte fte fte ..."
+        "... fem fem fem ..."
+        "... fso ... fpa fpa";
     }
 
     @include screen-large {
+      #footer_text {
+        font-size: $h6-font-size;
+        line-height: $h6-line-height;
+      }
+
       grid-template-areas:
-        "... ... ... ... ... ... foc";
+        "fte fte ... fem fem fem fem"
+        "... ... ... fso ... fpa fpa";
     }
   }
 }
@@ -514,14 +555,16 @@
         }
       }
 
-      #result_paragraph {
-        grid-area: rpa;
+      #result_text {
+        grid-area: rte;
+        font-size: $h6-font-size;
+        line-height: $h6-line-height;
       }
 
       grid-template-areas:
         "rhe"
         "..."
-        "rpa"
+        "rte"
         "..."
         "r01"
         "..."
@@ -535,7 +578,7 @@
         grid-template-areas:
           "rhe rhe rhe"
           "... ... ..."
-          "rpa rpa rpa"
+          "rte rte rte"
           "... ... ..."
           "r01 r01 r01"
           "... ... ..."
@@ -549,7 +592,8 @@
       @include screen-medium {
         grid-template-areas:
           "... rhe rhe rhe ..."
-          "... rpa rpa rpa ..."
+          "... rte rte rte ..."
+          "... ... ... ... ..."
           "... r01 r01 r02 r02"
           "... r03 r03 r04 r04";
       }
@@ -558,93 +602,7 @@
         grid-template-areas:
           "rhe rhe ... r01 r01 r02 r02"
           "... ... ... ... ... ... ..."
-          "rpa rpa ... r03 r03 r04 r04";
-      }
-    }
-  }
-
-  &_contact_cta {
-    .container {
-      #cta_heading {
-        grid-area: che;
-      }
-
-      #cta_form {
-        grid-area: cfo;
-
-        label {
-          display: block;
-          margin-bottom: $nspace3;
-
-          &:not(:first-child) {
-            margin-top: $nspace4;
-          }
-        }
-
-        #form_name,
-        #form_email {
-          border: none;
-          border-bottom: 1px solid $color-text-deco;
-        }
-
-        button {
-          margin-top: $nspace4;
-        }
-      }
-
-      #cta_email {
-        grid-area: cem;
-
-        p {
-          margin-bottom: $nspace2;
-        }
-      }
-
-      grid-template-areas:
-        "che"
-        "..."
-        "cfo"
-        "..."
-        "cem";
-
-      @include screen-small {
-        grid-template-areas:
-          "che che che"
-          "... ... ..."
-          "cfo cfo cfo"
-          "... ... ..."
-          "cem cem cem";
-      }
-
-      @include screen-medium {
-        grid-template-areas:
-          "... che che che ..."
-          "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... cfo cfo cfo ..."
-          "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... ... ... ... ..."
-          "... cem cem cem ..."
-      }
-
-      @include screen-large {
-        #cta_form {
-          max-width: 350px;
-
-          > label {
-            font-size: $h5-font-size;
-          }
-        }
-
-        #cta_email {
-          font-size: $h5-font-size;
-        }
-
-        grid-template-areas:
-          "che che ... cfo cfo cfo ..."
-          "cem cem ... cfo cfo cfo ...";
+          "rte rte ... r03 r03 r04 r04";
       }
     }
   }
