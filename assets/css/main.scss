@@ -356,13 +356,9 @@
       @include screen-large {
         grid-template-rows: 1fr 1.5fr;
 
-        .value_illustration {
-          width: 100%;
-        }
-
         grid-template-areas:
-          "vil vil vil vhe vhe vhe ..."
-          "vil vil vil vpa vpa vpa ...";
+          "vil vil vil vil vhe vhe vhe"
+          "vil vil vil vil vpa vpa vpa";
       }
     }
   }
@@ -370,9 +366,13 @@
   &_value_custom-features {
     .container {
       @include screen-large {
+        .value_illustration {
+          width: 80%;
+        }
+        
         grid-template-areas:
-          "... vhe vhe vhe vil vil vil"
-          "... vpa vpa vpa vil vil vil";
+          "vhe vhe vhe vil vil vil vil"
+          "vpa vpa vpa vil vil vil vil";
       }
     }
   }
