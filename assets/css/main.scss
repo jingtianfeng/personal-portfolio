@@ -71,17 +71,17 @@
     }
 
     @include screen-medium {
+      grid-template-areas:
+        "... fem fem fil fil"
+        "... fso fso fil fil";
+    }
+
+    @include screen-large {
       #footer_email {
         font-size: $h4-font-size;
         line-height: $h4-line-height;
       }
 
-      grid-template-areas:
-        "fil fil fem fem fem"
-        "fil fil fso fso fso";
-    }
-
-    @include screen-large {
       grid-template-areas:
         "fil fil fil fem fem fem fem"
         "fil fil fil fso fso fso fso";
