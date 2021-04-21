@@ -31,48 +31,43 @@
 
 #footer {
   .container {
+    #footer_illustration {
+      grid-area: fil;
+      align-self: center;
+      height: $icon5;
+      width: $icon5;
+    }
+
     #footer_email {
       grid-area: fem;
-    }
-
-    #footer_paragraph {
-      grid-area: fpa;
-    }
-
-    #footer_paragraph,
-    #footer_social {
-      margin: $nspace3 0;
+      align-self: end;
     }
 
     #footer_social {
       grid-area: fso;
       display: flex;
-      flex-direction: column;
-      line-height: $p-line-height;
+      flex-direction: row;
 
       > a:not(:first-child) {
-        margin-top: $nspace3;
+        margin-left: $nspace4;
+      }
+
+      > a > svg > g > path {
+        fill: $color-text-deco;
+        stroke: none;
       }
     }
 
-    #footer_text {
-      grid-area: fte;
-      font-size: $h5-font-size;
-      line-height: $h5-line-height;
-    }
-
     grid-template-areas:
-        "fte"
+        "fil"
         "fem"
-        "fpa"
-        "..."
         "fso";
 
     @include screen-small {
       grid-template-areas:
-          "fte fte fte"
+          "fil fil fil"
           "fem fem fem"
-          "fso fpa fpa";
+          "fso fso fso";
     }
 
     @include screen-medium {
@@ -82,20 +77,14 @@
       }
 
       grid-template-areas:
-        "... fte fte fte ..."
-        "... fem fem fem ..."
-        "... fso ... fpa fpa";
+        "fil fil fem fem fem"
+        "fil fil fso fso fso";
     }
 
     @include screen-large {
-      #footer_text {
-        font-size: $h6-font-size;
-        line-height: $h6-line-height;
-      }
-
       grid-template-areas:
-        "fte fte ... fem fem fem fem"
-        "... ... ... fso ... fpa fpa";
+        "fil fil fil fem fem fem fem"
+        "fil fil fil fso fso fso fso";
     }
   }
 }
