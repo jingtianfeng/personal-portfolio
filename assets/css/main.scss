@@ -318,9 +318,9 @@
       .value {
         &_illustration {
           grid-area: vil;
-          height: $icon6;
-          width: $icon6;
-          margin: auto auto 0 auto;
+          height: auto;
+          width: 90%;
+          margin: 0 auto;
         }
 
         &_heading {
@@ -330,6 +330,7 @@
 
         &_paragraph {
           grid-area: vpa;
+          max-width: 350px;
         }
       }
 
@@ -341,7 +342,6 @@
       @include screen-small {
         grid-template-areas:
             "vil vil vil"
-            "... ... ..."
             "vhe vhe vhe"
             "vpa vpa vpa";
       }
@@ -349,7 +349,6 @@
       @include screen-medium {
         grid-template-areas:
           "... vil vil vil ..."
-          "... ... ... ... ..."
           "... vhe vhe vhe ..."
           "... vpa vpa vpa ...";
       }
@@ -358,13 +357,7 @@
         grid-template-rows: 1fr 1.5fr;
 
         .value_illustration {
-          align-self: center;
-          margin: 0 0 0 auto;
-        }
-
-        .value_heading,
-        .value_paragraph {
-          text-align: left;
+          width: 100%;
         }
 
         grid-template-areas:
@@ -377,10 +370,6 @@
   &_value_custom-features {
     .container {
       @include screen-large {
-        .value_illustration {
-          margin: 0 auto 0 0;
-        }
-
         grid-template-areas:
           "... vhe vhe vhe vil vil vil"
           "... vpa vpa vpa vil vil vil";
