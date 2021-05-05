@@ -2,26 +2,26 @@
 ---
 
 @font-face {
-  src: url("/assets/fonts/kamerik-medium.woff2");
+  src: url("{{'/assets/fonts/kamerik-medium.woff2' | relative_url}}");
   font-family: "Kamerik";
   font-weight: normal;
 }
 
 @font-face {
-  src: url("/assets/fonts/kamerik-medium-italic.woff2");
+  src: url("{{'/assets/fonts/kamerik-medium-italic.woff2' | relative_url}}");
   font-family: "Kamerik";
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
-  src: url("/assets/fonts/kamerik-bold.woff2");
+  src: url("{{'/assets/fonts/kamerik-bold.woff2' | relative_url}}");
   font-family: "Kamerik";
   font-weight: bold;
 }
 
 @font-face {
-  src: url("/assets/fonts/kamerik-bold-italic.woff2");
+  src: url("{{'/assets/fonts/kamerik-bold-italic.woff2' | relative_url}}");
   font-family: "Kamerik";
   font-style: italic;
   font-weight: bold;
